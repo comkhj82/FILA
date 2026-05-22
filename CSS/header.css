@@ -1,0 +1,139 @@
+header{
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 14px;
+
+
+}
+
+header > a{
+    position: absolute;
+    left: 48px;
+}
+header > nav{
+    position: absolute;
+    right: 48px;
+}
+
+header > .home > img{
+    width: 40px;
+    height: 100%;
+    object-fit: cover;
+    /*position: relative;*/
+
+}
+
+
+header > .main_menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+
+    /*font-family: var(--font-family-base);*/
+}
+
+header > .main_menu > li{
+    padding: 4px 8px;
+    cursor: pointer;
+
+}
+
+header > .main_menu > li > a{
+    text-decoration: none; /*언더라인 제거*/
+    color: black;
+
+    padding: 4px;
+    &:hover{
+        border-bottom: 2px solid #0039b3;
+        border-radius: 2px;
+
+        color: #0039b3;
+        font-weight: 600;
+
+    }
+}
+
+/********************************************/
+/*헤더 우측 아이콘*/
+
+header > nav > ul{
+    display: flex;
+    /*position: relative;*/
+
+
+}
+header > nav > ul li{
+    padding: 4px 8px;
+    cursor: pointer;
+
+}
+header > nav > ul li a{
+    color: #222;
+    font-size: 24px;
+    padding-left: 10px;
+}
+/**********************/
+/*main > .banner > video{*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    object-fit: cover;*/
+/*    !*이 공식 외우면 편해용*!*/
+/*}*/
+
+/***********************************/
+
+header .sub_menu_container{
+    display: flex;
+    /*display: none:*/
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    transform: translateY(100%);
+    background-color: white;
+    /*bottom: calc(-100% - 12px);*/
+    /*bottom: -100px;*/
+    width: 100%;
+}
+header .sub_menu_container > div{
+    width: 200px;
+}
+header .sub_menu_title{
+    display: block;
+    color: #222;
+    font-size: 16px;
+    padding: 20px 0px;
+
+    /*text-align: center;*/
+}
+
+header .sub_menu_title a{
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+
+
+}
+
+header .sub_menu > li{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+header .sub_menu > li > a{
+    color: #222;
+    font-size: 14px;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}

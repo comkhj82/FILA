@@ -8,6 +8,14 @@ h1{
     font-size: 42px;
     font-weight: 600;
 }
+h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+h3{
+    font-size: 24px;
+    font-weight: 600;
+}
 /********************************************/
 /*아코디언 디자인*/
 
@@ -329,12 +337,31 @@ h1{
 /*************************************************************/
 /*체크포인트 섹션*/
 #checkpoint_section{
-    margin: 50px;
+    margin-top: 50px;
+    padding: 50px 50px;
+    background-color: #111;
+    color: white;
+}
+#checkpoint_section > section{
+    margin: 50px 0;
+}
+#checkpoint > h2{
+
+    margin: 30px 0;
 }
 #checkpoint .card{
     display: inline-block;
-    width: 320px;
-    margin-right: 16px;
+    width: 400px;
+    margin-right: 20px;
+
+}
+#checkpoint .card h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+#checkpoint .card p{
+    line-height: 130%;
 }
 #checkpoint .card .image_container{
     aspect-ratio: 1 / 1;
@@ -344,11 +371,27 @@ h1{
     height: 100%;
     object-fit: cover;
 }
+/************************************************************/
+/*모델컷*/
+#model_cut{
+    /*margin: 150px 50px;*/
+}
 
+#model_cut > h2{
+    margin-top: 100px;
+}
+#model_cut > p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #c8c8c8;
+}
 #model_cut .card{
     display: inline-block;
-    width: 320px;
-    margin-right: 16px;
+    width: 400px;
+    margin-right: 20px;
+
 }
 #model_cut .card .image_container{
     aspect-ratio: 1 / 1;
@@ -366,12 +409,12 @@ h1{
 
 }
 #review > button{
-    width: 200px;
-    margin: 10px 0;
+    width: 280px;
+    margin: 30px 0 20px 0;
     padding: 10px 0;
     border: none;
     background-color: #ffdad6;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -417,7 +460,7 @@ h1{
 #review .photo_video > .header{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 50px 0 30px 0;
     /*align-items: center;*/
 }
 #review .photo_video > .header > button{

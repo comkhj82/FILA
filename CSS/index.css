@@ -53,33 +53,46 @@ h2{
 /*****************************/
 header{
     position: absolute;
-    top: 30px;
     width: 100%;
+    top: 30px;
     background-color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 14px 14px;
 
+}
 
+header > a{
+    position: absolute;
+    left: 48px;
+}
+header > nav{
+    position: absolute;
+    right: 48px;
 }
 
 header > .home > img{
-    width: 30px;
+    width: 40px;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
 
 }
 
-header > ul{
-    display: flex;
-
-}
 header > .main_menu{
+    display: flex;
+    /*position: absolute;*/
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     padding: 4px 8px;
-    background-color: white;
-    font-family: var(--font-family-base);
+    /*background-color: none;*/
+
 }
 
 header > .main_menu > li{
-    padding: 3px 8px;
+    padding: 4px 8px;
     cursor: pointer;
 }
 
@@ -87,6 +100,7 @@ header > .main_menu > li > a{
     text-decoration: none; /*언더라인 제거*/
     color: black;
     padding: 4px;
+
     &:hover{
         border-bottom: 2px solid #0039b3;
         border-radius: 2px;
@@ -97,8 +111,12 @@ header > .main_menu > li > a{
     }
 }
 
+/********************************************/
+/*헤더 우측 아이콘*/
+
 header > nav > ul{
     display: flex;
+    position: relative;
 
 
 }
@@ -109,10 +127,12 @@ header > nav > ul li{
 }
 header > nav > ul li a{
     color: #222;
+    font-size: 24px;
+    padding-left: 10px;
 }
 /**********************/
 main > .banner > video{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     /*이 공식 외우면 편해용*/
@@ -122,6 +142,7 @@ main > .banner > video{
 
 .trending_now{
     padding: var(--main-y-padding) var(--main-x-padding);
+    overflow: hidden;
 }
 
 .trending_now > h2{
@@ -184,9 +205,10 @@ main > .banner > video{
 .trending_now > ul > li > a{
     display: flex;
     flex-direction: column;
-    padding: 4px;
+    padding: 4px 0;
     text-decoration: none;
     color: #222;
+    overflow: hidden;
 
 
 }
@@ -197,7 +219,8 @@ main > .banner > video{
     padding-bottom: 10px;
 }
 .trending_now > ul > li > a .image_container img{
-    padding: 4px;
+    /*padding: 4px;*/
+    overflow: hidden;
 }
 
 /******************************************/

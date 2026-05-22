@@ -1,0 +1,521 @@
+.tag{
+    border-radius: 32px;
+    border: 1px solid black;
+    font-size: 12px;
+    padding: 4px 18px;
+}
+h1{
+    font-size: 42px;
+    font-weight: 600;
+}
+/********************************************/
+/*아코디언 디자인*/
+
+.accordion{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding-bottom: 10px;
+
+    margin: 12px 0;
+    background-color: white;
+    /*text-align: center;*/
+}
+.accordion > .head{
+    /*background-color: #b6c4ff;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+
+
+
+}
+
+.accordion > .body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px 10px;
+    padding: 20px 50px;
+    font-size: 16px;
+    font-weight: 500
+    /*align-items: center;*/
+    text-align: center;
+    justify-content: center;
+
+
+
+}
+/*사이즈 아코디언*/
+.accordion .body .size{
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+/*************************************************/
+/*main*/
+#main_section{
+    display: flex;
+    height: 100vh;
+    background-color: #767676;
+
+}
+#main_section > div{
+    flex: 1;
+    height: 100%;
+    background-color: white;
+
+}
+#main_section > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+/*#main_section > div:nth-child(2){*/
+/*    padding: 0 100px;*/
+/*}*/
+/************************************************/
+
+#main_section .information{
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+}
+#main_section .information .information_header{
+
+    /*background-color: #b6c4ff;*/
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+#main_section .information .information_header .share{
+    border: none;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#main_section .information .information_header .tag{
+    background-color: var(--color-tertiary-fixed-dim);
+    border-radius: 20px;
+    border: 1px solid #767676;
+    font-size: 12px;
+
+}
+#main_section .information .title{
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+/*********************************/
+/*메인섹션 information 오른쪽*/
+#main_section .information .group{
+    display: flex;
+    justify-content: space-between;
+}
+#main_section .information .group ul li{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+#main_section .information .group ul li a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*****************************************/
+/*카트에 추가*/
+#main_section .information .cart{
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: var(--color-primary);
+    color: white;
+}
+#main_section .information .cart > button{
+    width: 100%;
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/***************************************/
+/*디테일*/
+#detail_section{
+    display: flex;
+    margin: 50px
+}
+#detail_section > div{
+    flex: 1;
+}
+#detail_section .detail_info > div{
+    padding: 20px 30px;
+}
+
+#detail_section .detail_info .text{
+    line-height: 150%;
+}
+
+#detail_section .detail_info span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+}
+#detail_section .detail_info .body span:first-child{
+    color: #111;
+}
+
+/****************************************/
+/*디테일이미지*/
+#detail_section .image_container{
+    padding-right: 30px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    align-self: flex-start;
+}
+
+#detail_section .image_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/****************************************/
+
+
+#detail_section .detail_info .accordion{
+    border: none;
+    padding: unset;
+}
+#detail_section .detail_info .accordion > .head{
+    padding: 16px 0px;
+    border-bottom: 1px solid black;
+    border-radius: unset;
+}
+#detail_section .detail_info .accordion > .body{
+    display: block;
+    padding: 20px 10px;
+}
+
+#detail_section .detail_info .accordion > .body.membership li{
+    display: list-item;
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 16px 0;
+    &::before{
+        content: "\2713";
+        margin-right: 12px;
+        font-weight: bold;
+    }
+}
+#detail_section .detail_info .accordion > .product_information > div{
+    display: flex;
+    margin: 16px 0;
+}
+#detail_section .detail_info .accordion > .product_information span:first-child{
+    width: 140px;
+    font-weight: bold;
+}
+
+/**************************************/
+#detail_section .detail_info .accordion .fit_container{
+    display: flex;
+}
+#detail_section .detail_info .accordion .fit_container > div{
+    border: 1px solid black;
+    flex: 1;
+    padding: 10px;
+    &:not(:last-child){
+        margin-right: 12px;
+    }
+}
+#detail_section .detail_info .accordion .fit_container > div > span{
+    display: block;
+    text-align: center;
+    margin: 4px 0;
+}
+
+/******************************************************/
+#detail_section .detail_info .accordion .spec_container{
+    padding: 10px 0;
+}
+#detail_section .detail_info .accordion .spec_container .spec{
+    padding: 12px 0;
+}
+
+/*******************************************************/
+#detail_section .detail_info .accordion .progress_container{
+    position: relative;
+}
+#detail_section .detail_info .accordion .progress.parent{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    overflow: hidden;
+
+}
+#detail_section .detail_info .accordion .progress.child{
+    width: 100%;
+    height: 4px;
+    background-color: greenyellow;
+    animation-name: progressbar;
+    animation-duration: 1s;
+    transform: translateX(-50%);
+
+}
+@keyframes progressbar {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+
+}
+
+#detail_section .detail_info .accordion .progress_container span{
+    position: absolute;
+    transform: translateX(-50%);
+    &:nth-child(1){
+        left: 0;
+        transform: none;
+    }
+    &:nth-child(2){
+        left: 50%;
+    }
+    &:nth-child(3){
+        left: 96%;
+    }
+}
+/*************************************************************/
+/*체크포인트 섹션*/
+#checkpoint_section{
+    margin: 50px;
+}
+#checkpoint .card{
+    display: inline-block;
+    width: 320px;
+    margin-right: 16px;
+}
+#checkpoint .card .image_container{
+    aspect-ratio: 1 / 1;
+}
+#checkpoint .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#model_cut .card{
+    display: inline-block;
+    width: 320px;
+    margin-right: 16px;
+}
+#model_cut .card .image_container{
+    aspect-ratio: 1 / 1;
+}
+#model_cut .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/********************************************/
+/*리뷰섹션*/
+#review{
+    margin: 50px;
+
+}
+#review > button{
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: none;
+    background-color: #ffdad6;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#review .rating{
+    display: flex;
+    /*justify-content: flex-start;*/
+    align-items: center;
+    gap: 100px;
+    margin: 20px 0;
+
+}
+#review .rating > div{
+    /*flex: 1;*/
+}
+#review .rating > div > span{
+    display: block; /*이거 뭐지... 무슨 메커니즘이지*/
+    font-size: 16px;
+    font-weight: 500;
+}
+#review .rating > .total_rating{
+    /*flex: 3;*/
+    font-size: 18px;
+
+}
+#review .rating > .total_rating .stars i{
+    margin: 0 20px;
+}
+#review .rating{
+    text-align: center;
+}
+#review .rating > span{
+    display: block;
+}
+
+#review .total_rating .stars{
+    display: inline-block;
+    color: #ff9900;
+}
+
+/**************************************************/
+/*포토&동영상*/
+#review .photo_video > .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    /*align-items: center;*/
+}
+#review .photo_video > .header > button{
+    border: none;
+    background-color: unset;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #767676;
+    /*아이콘 어디감?????*/
+}
+#review .photo_video > ul{
+    display: grid;
+    grid-template-columns: repeat(8, minmax(200px, 300px));
+    gap: 6px;
+}
+#review .photo_video .image_container{
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /*padding-right: 10px;*/
+}
+#review .photo_video img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#review .photo_video ul i{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 30px;
+    color: white;
+    /*cursor: pointer;*/
+}
+
+/***********************************************/
+#review .filter > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+#review .filter > div > .sort_container{
+    /*margin-right: 10px;*/
+}
+#review .filter > div > .sort_container button{
+    border: none;
+    background-color: unset;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #767676;
+    margin-right: 10px;
+}
+#review .filter .search{
+    background-color: #ffdad6;
+    border-radius: 8px;
+    padding: 8px;
+}
+#review .filter .search > input{
+    border: none;
+    background-color: unset;
+}
+
+#review .filter > div:nth-child(2){
+    justify-content: flex-start;
+}
+/***************************************************/
+#review .reviews .item{
+    display: flex;
+}
+#review .reviews .item .contents{
+    flex: 1;
+}
+#review .reviews .item .contents .user{
+    display: flex;
+    align-items: center;
+}
+#review .reviews .item .contents .user_icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#review .reviews .item .contents .user_icon > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#review .reviews .item .contents .user_name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+
+}

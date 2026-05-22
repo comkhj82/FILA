@@ -1,0 +1,160 @@
+:root{
+    --modal-form-padding: 32px;
+}
+
+body > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_container{
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    display: none;
+    /*이부분!*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*디스플레이 none했다가 클릭하면 flex로 바뀌도록 하면 됨.!!!!!*/
+
+.modal{
+    display: flex;
+    width: 70%;
+    height: 90%;
+    background-color: #ffece7;
+
+}
+.modal > section{
+    flex: 1;
+}
+/*****************************************/
+
+.modal .img_section > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal .form_section > form{
+    position: relative;
+    height: 100%;
+}
+
+.modal .form_section .select_all_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px var(--modal-form-padding);
+    font-size: var(--font-body-lg-size);
+    align-items: center;
+    border-bottom: 1.2px solid var(--color-primary);
+}
+.modal .form_section .select_all_container .close_btn{
+    background: none;
+    border: none;
+    font-size: inherit;
+}
+/***********************************************/
+.modal .form_section .product_container{
+    height: 60%;
+    overflow-y: scroll;
+    padding: 0 var(--modal-form-padding);
+}
+.modal .form_section .product_container li{
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-secondary);
+}
+.modal .form_section .product_container .product_size{
+    color: var(--color-secondary);
+}
+.modal .form_section .product_item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.modal .form_section .product_item input{
+    margin-right: 8px;
+}
+.modal .form_section .product_item label{
+    display: grid;
+    flex: 1;
+    align-items: center;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas:
+            "image title"
+            "image color"
+            "image price";
+    grid-column-gap: 16px;
+}
+.modal .form_section .product_item img{
+    grid-area: image;
+    height: 120px;
+}
+.modal .form_section .product_item b{
+    grid-area: title;
+    font-size: var(--font-body-lg-size);
+}
+.modal .form_section .product_item span{
+    grid-area: color;
+    font-size: var(--font-label-sm-size);
+    color: var(--color-secondary);
+}
+.modal .form_section .product_item strong{
+    grid-area: price;
+    font-size: var(--font-headline-md-size);
+}
+
+.modal .form_section .product_size{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 48px;
+    cursor: pointer;
+}
+.modal .total_price_container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 28px var(--modal-form-padding);
+}
+
+.modal .submit_container{
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
+    padding: 0 var(--modal-form-padding);
+}
+.modal .submit_container > button{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

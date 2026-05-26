@@ -167,6 +167,10 @@ main > .banner > video{
     font-size: 18px;
 
 }
+.trending_now li .btn.active{
+    text-decoration: underline;
+    color: #0039b3;
+}
 .trending_now .arrow_button_container{
     display: flex;
 }

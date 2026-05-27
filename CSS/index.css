@@ -131,12 +131,91 @@ header > nav > ul li a{
     padding-left: 10px;
 }
 /**********************/
-main > .banner > video{
+/*케러셀*/
+
+/*body{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+.carousel_container{
+    position: relative;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    /*이 공식 외우면 편해용*/
+    background-color: greenyellow;
+    overflow: hidden;
 }
+.carousel{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    height: 100%;
+    background-color: darkblue;
+    cursor: pointer;
+}
+.carousel > .slide{
+    width: 100vw;
+    /*border: 1px solid black;*/
+    background-color: lightgray;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide{
+    position: relative;
+}
+.slide > div{
+    position: absolute;
+    width: 70%;
+    left: 10px;
+    bottom: 10px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 50px;
+}
+.button_container{
+    display: flex;
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.button_container > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    color: #111;
+    z-index: 99;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+
+
+
+/*main > .banner > video{*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    object-fit: cover;*/
+/*    !*이 공식 외우면 편해용*!*/
+/*}*/
 
 /**************************************/
 
@@ -216,6 +295,13 @@ main > .banner > video{
 
 
 }
+.trending_now > ul{
+    display: none;
+}
+.trending_now > ul.active{
+    /*display: block;*/
+    display: flex;
+}
 
 .trending_now > ul > li > a span{
     font-size: 18px;
@@ -225,6 +311,9 @@ main > .banner > video{
 .trending_now > ul > li > a .image_container img{
     /*padding: 4px;*/
     overflow: hidden;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
 
 /******************************************/
@@ -249,7 +338,7 @@ main .image_section{
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 main.image_section img{
-    width: 100%;
+    width: 100px;
     height: 100%;
     object-fit: cover;
 }

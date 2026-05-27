@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="CSS/popup.css">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
-    <script src="JS/header.js"></script>
+<!--    <script src="JS/header.js" defer></script>-->
     <script src="JS/index.js" defer></script>
 
 
@@ -23,54 +23,43 @@
         </button>
     </div>
 
-    <header>
-
-        <a class="home" href="#">
-            <img src="IMAGE/LOGO/LOGO.png" alt="FILA 로고">
-        </a>
-
-        <ul class="main_menu">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Tennis</a></li>
-            <li><a href="#">F.H.S</a></li>
-
-        </ul>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-map-location"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- <div id="header_container"></div> -->
-
-
     <main>
-        <section class="banner">
-            <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/40ed1433d6f740edae9171f7a3066c3a/40ed1433d6f740edae9171f7a3066c3a.HD-1080p-7.2Mbps-83835070.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"></video>
+        <section class="carousel_container">
+            <div class="button_container">
+                <button type="button"><i class="fa-solid fa-angle-left"></i></button>
+                <button type="button"<i class="fa-solid fa-angle-right"></i></button>
+            </div>
 
+            <ul class="carousel">
+                <li class="slide">
+<!--                    <div>-->
+<!--                        <h2>TITLE1</h2>-->
+<!--                        <p>이건 파이리와 꼬부기의 싸움이다</p>-->
+<!--                    </div>-->
+                    <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/40ed1433d6f740edae9171f7a3066c3a/40ed1433d6f740edae9171f7a3066c3a.HD-1080p-7.2Mbps-83835070.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"></video>
+                </li>
+                <li class="slide">
+                    <div>
+<!--                        <h2>TITLE2</h2>-->
+<!--                        <p>리자드 진화</p>-->
+                    </div>
+                    <video playsinline="true" autoplay="autoplay" loop="" muted="muted" class="media-video" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/2d2319ff42ad47578bfdc01800606d5f/2d2319ff42ad47578bfdc01800606d5f.HD-1080p-7.2Mbps-84613462.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668"></video>
+                </li>
+                <li class="slide">
+                    <div>
+<!--                        <h2>TITLE3</h2>-->
+<!--                        <p>리자몽 최종 진화</p>-->
+                    </div>
+
+<!--                    <video playsinline="true" loop="" muted="muted" preload="none" class="media-video" poster="//www.fila.co.kr/cdn/shop/files/preview_images/b47fff7214de44db819510485c6c93ab.thumbnail.0000000000_small.jpg?v=1778044809"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/b47fff7214de44db819510485c6c93ab/b47fff7214de44db819510485c6c93ab.HD-1080p-7.2Mbps-83467571.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/b47fff7214de44db819510485c6c93ab.thumbnail.0000000000_small.jpg?v=1778044809"></video>-->
+                    <img src="IMAGE/banner_1.png" height="2160" width="3840"/></li>
+            </ul>
         </section>
+
+<!--        <section class="banner">-->
+<!--            <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/40ed1433d6f740edae9171f7a3066c3a/40ed1433d6f740edae9171f7a3066c3a.HD-1080p-7.2Mbps-83835070.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"></video>-->
+
+<!--        </section>-->
 
         <section class="trending_now">
             <h2>Trending Now</h2>
@@ -94,11 +83,12 @@
                     </button>
                 </div>
             </div>
-            <ul>
+            <ul class="active">
                 <li>
                     <a href="#">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img1">
+
                         </div>
                         <span class="tag">공용</span>
                         <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
@@ -139,6 +129,321 @@
                     <a href="#">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img5">
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul class="">
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product2.jpg" height="1200" width="800"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product2.jpg" height="1200" width="800"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product2.jpg" height="1200" width="800"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product2.jpg" height="1200" width="800"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product2.jpg" height="1200" width="800"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+
+                            <img src="IMAGE/product.jpg" height="421" width="352"/>
+
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product.jpg" height="421" width="352"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product.jpg" height="421" width="352"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product.jpg" height="421" width="352"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product.jpg" height="421" width="352"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/user.jpg" height="607" width="500"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/user.jpg" height="607" width="500"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/user.jpg" height="607" width="500"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/user.jpg" height="607" width="500"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/user.jpg" height="607" width="500"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+
+                            <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
+                        </div>
+                        <span class="tag">공용</span>
+                        <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>
+                        <strong class="price">49,900원</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="image_container">
+                            <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
                         <span class="tag">공용</span>
                         <strong class="title">&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</strong>

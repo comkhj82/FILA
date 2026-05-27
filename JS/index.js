@@ -8,62 +8,145 @@
 //     }
 
 // }
-document.addEventListener("DOMContentLoaded", () => {
-    const headerContainer = document.getElementById("header-container");
 
-    // 1. 다른 폴더/파일에 있는 header.html 원격 로드
-    fetch("FILA/FILA/HTML/header.html") // 경로가 다르면 '../header.html' 등으로 수정 필요
-        .then(response => response.text())
-        .then(data => {
-            // 가져온 HTML 문자열을 container 내부에 파싱하여 주입
-            headerContainer.innerHTML = data;
 
-            // HTML이 화면에 그려진 "직후"에 호버 이벤트를 바인딩해야 합니다.
-            initHeaderHover();
-        })
-        .catch(error => console.error("헤더를 불러오는 중 오류 발생:", error));
-});
 
-// 2. 메뉴 호버 이벤트 제어 함수
-function initHeaderHover() {
-    const mainMenuItems = document.querySelectorAll(".main_menu > li");
 
-    mainMenuItems.forEach(item => {
-        const subMenu = item.querySelector(".sub_menu_container");
-        
-        // 서브 메뉴가 존재하는 카테고리만 이벤트 등록
-        if (subMenu) {
-            // 마우스가 올라갔을 때
-            item.addEventListener("mouseenter", () => {
-                subMenu.classList.add("active");
-                // 만약 전체 배경이 내려오는 슬라이드 효과를 원한다면 slideDown 처리 가능
-            });
 
-            // 마우스가 벗어났을 때
-            item.addEventListener("mouseleave", () => {
-                subMenu.classList.remove("active");
-            });
-        }
-    });
+
+const carouselContainer = document.querySelector('.carousel_container');
+const carousel = carouselContainer.querySelector('.carousel');
+let slides = carousel.getElementsByClassName('slide');
+const [leftBtn, rightBtn] = carouselContainer.querySelectorAll('.button_container > button');
+const slideWidth = +getComputedStyle(carouselContainer).width.split('px')[0];
+const slideMoveMillisecond = 3000;
+let carouselMousePosition = {
+    startX: 0,
+    endX: 0,
 }
+let autoplay = true;
+
+if(autoplay){
+    setInterval(() => {
+        move_right();
+    }, slideMoveMillisecond * 4);
+}
+
+function move_left(){
+    leftBtn.onclick = null;
+    carouselContainer.onmousedown = null;
+    carouselContainer.onmouseup = null;
+    let slide = slides[slides.length-1].cloneNode(true);
+    carousel.insertAdjacentElement('afterbegin', slide);
+    carousel.style.transform = `translateX(${-slideWidth}px)`;
+
+    setTimeout(() => {
+        carousel.style.transitionDuration = `${slideMoveMillisecond}ms`;
+        carousel.style.transform = `translateX(0px)`;
+        slides[slides.length-1].remove();
+        setTimeout(() => {
+            carousel.style.transitionDuration = '0s';
+            leftBtn.onclick = move_left;
+            carouselContainer.onmousedown = carousel_mouse_down;
+            carouselContainer.onmouseup = carousel_mouse_up;
+        }, slideMoveMillisecond);
+    }, 10);
+}
+
+function move_right(){
+    rightBtn.onclick = null;
+    carouselContainer.onmousedown = null;
+    carouselContainer.onmouseup = null;
+    let slide = slides[0].cloneNode(true);
+    carousel.insertAdjacentElement('beforeend', slide);
+    carousel.style.transitionDuration = `${slideMoveMillisecond}ms`;
+    carousel.style.transform = `translateX(${-slideWidth}px)`;
+    setTimeout(() => {
+        slides[0].remove();
+        carousel.style.transform = `translateX(0px)`;
+        carousel.style.transitionDuration = '0s';
+        rightBtn.onclick = move_right;
+        carouselContainer.onmousedown = carousel_mouse_down;
+        carouselContainer.onmouseup = carousel_mouse_up;
+    }, slideMoveMillisecond);
+}
+
+function carousel_mouse_down(e){
+    carouselMousePosition.startX = e.clientX;
+}
+
+function carousel_mouse_up(e){
+    carouselMousePosition.endX = e.clientX;
+    // 감도 조절: 사용자가 실수로 미세하게 움직인 경우는 무시 (픽셀 단위)
+    const threshold = 50;
+    const diffX = carouselMousePosition.startX - carouselMousePosition.endX;
+    if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+            move_right();
+        } else {
+            move_left();
+        }
+    }
+}
+
+carouselContainer.onmousedown = carousel_mouse_down;
+carouselContainer.onmouseup = carousel_mouse_up;
+leftBtn.onclick = move_left;
+rightBtn.onclick = move_right;
+console.log(carouselContainer)
+
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////////////////
 //Trending Section 목록 클릭
-const trendingItems = document.querySelectorAll('.trending_now li .btn');
+const trendingButtons = document.querySelectorAll('.trending_now li .btn');
+let trendingLists = document.querySelectorAll('.trending_now > ul');
+
 function init(){
-        for(let j = 0; j < trendingItems.length; j++){
-            // 현재 class 목록에서 active를 제거해줘
-            trendingItems[j].classList.remove('active');
-           
-
-        }
+    for(let i = 0; i < trendingButtons.length; i++){
+        // 현재 class 목록에서 active를 제거해줘
+        trendingButtons[i].classList.remove('active');
+        trendingLists[i].classList.remove('active');
     }
+}
 
-    for(let i = 0; i < trendingItems.length; i++){
-        trendingItems[i].onclick = () => {
-            init();
-            // 원래 가지고 있던 클래스 목록에 active 를 추가해줘
-            trendingItems[i].classList.add('active');
-           
-        }
+for(let i = 0; i < trendingButtons.length; i++){
+    trendingButtons[i].onclick = () => {
+        init();
+        // 원래 가지고 있던 클래스 목록에 active 를 추가해줘
+        trendingButtons[i].classList.add('active');
+        trendingLists[i].classList.add('active');
     }
+}
+
+    //////////////////////////////////////////////////////
+///////팝업창
+const popup = document.querySelector('.modal_container');
+let shopTheLook = document.querySelectorAll('.img_moved img');
+let cancel = document.querySelector('.form_section .close_btn');
+// let close = document.querySelector('.modal .close');
+// let open = document.querySelector('.modal .open');
+
+shopTheLook.forEach(img => {
+    img.onclick = () => {
+        popup.style.display = 'flex';
+    }
+})
+
+cancel.onclick = () => {
+    popup.style.display = 'none';
+}
+popup.onclick = (e) => {
+    if (e.target === popup) {
+        popup.style.display = 'none';
+    }
+}
+

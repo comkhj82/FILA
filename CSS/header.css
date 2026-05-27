@@ -94,8 +94,8 @@ header > nav > ul li a{
 /***********************************/
 
 header .sub_menu_container{
-    /* display: flex; */
-    display: none:
+     /*display: flex;*/
+    display: none;
     justify-content: center;
     position: absolute;
     left: 0;
@@ -107,8 +107,6 @@ header .sub_menu_container{
     /*bottom: -100px;*/
     width: 100%;
     background-color: rgba(255, 255, 255, 0.3);
-
-    opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 999;
 }

@@ -45,6 +45,10 @@ body > div{
     position: relative;
     height: 100%;
 }
+.modal .form_section i{
+    cursor: pointer;
+}
+
 
 .modal .form_section .select_all_container{
     display: flex;

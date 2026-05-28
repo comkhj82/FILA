@@ -25,6 +25,7 @@ h2{
     --main-x-padding: 20px;
 
 }
+
 /************************************************************/
 
 
@@ -32,7 +33,7 @@ h2{
 
 .coupon_info_container{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     background-color: #0039b3;
     color: white;
@@ -155,17 +156,18 @@ header > nav > ul li a{
 }
 .carousel > .slide{
     width: 100vw;
+    /*height: 100%;*/
     /*border: 1px solid black;*/
     background-color: lightgray;
 }
 video{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 .carousel_container img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 .slide{
@@ -335,11 +337,12 @@ video{
 main .image_section{
     display: flex;
     justify-content: center;
-    padding: var(--main-y-padding) var(--main-x-padding);
+    align-items: center;
+    padding: 100px 10px;
 }
-main.image_section img{
-    width: 100px;
-    height: 100%;
+main .image_section img{
+    width: 500px;
+    height: 400px;
     object-fit: cover;
 }
 main .image_section img:first-child{
@@ -368,15 +371,29 @@ main .image_section img:first-child{
     top: 0;
     right: 20px;
 }
-.edit_section > div{
+.edit_inner_container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.edit_inner_container > div{
     flex: 1;
 }
-.edit_section > div > .main{
-    width: 600px;
-    height: 100%;
-    object-fit: cover;
+.edit_inner_container > .image_container{
+    display: grid;
 }
-.edit_section > div > .sub{
+.edit_inner_container > div > .main{
+    width: 600px;
+    height: 1000px;
+    object-fit: cover;
+    position: relative;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    /*aspect-ratio: 1/2;*/
+}
+.edit_inner_container > div > .sub{
     position: absolute;
     top: 50%;
     right: 1000px;
@@ -391,7 +408,7 @@ main .image_section img:first-child{
 
 }
 
-.edit_section > .edit_section_text a{
+.edit_inner_container > .edit_section_text a{
 
     font-size: 42px;
     font-weight: 700;
@@ -405,8 +422,8 @@ main .image_section img:first-child{
     }
 }
 
-.edit_section > .edit_section_text a:not(:last-child){
-
+.edit_inner_container > .edit_section_text a:not(:last-child)::after{
+    content: ", ";
 }
 
 /*************************************/
@@ -639,4 +656,44 @@ footer .sns_nav a{
 }
 .site_information div{
     text-align: right;
+}
+
+/*******************************************************************/
+/*태블릿 이하일 때 적용하게따*/
+@media screen and (max-width: 1024px) {
+    main .image_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    main .image_section img{
+        padding: 4px;
+    }
+    main .image_section img:first-child{
+        margin: 0;
+    }
+}
+
+/*작은 태블릿 이하일 때 적용하게따*/
+@media screen and (max-width: 768px) {
+    .edit_section .image_container{
+        display: flex;
+        & > img{
+            position: relative;
+            flex: 1;
+        }
+    }
+    .edit_inner_container{
+        display: flex;
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+    }
+
+}
+/*모바일일 때 적용하게똬*/
+@media screen and (max-width: 480px) {
+
 }

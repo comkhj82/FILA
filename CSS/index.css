@@ -375,7 +375,7 @@ main .image_section img:first-child{
     font-weight: 800;
     position: absolute;
     /*위에 부모에 relative먼저 해줘야 얘가 페이지 젤 위가 아니라 니가 원하는 데로 감.*/
-    top: 0;
+    top: 20px;
     right: 1.25rem;
 }
 .edit_inner_container{
@@ -473,7 +473,6 @@ main .image_section img:first-child{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 .beginning_section a div{
     padding: 50px;
@@ -522,6 +521,7 @@ main .image_section img:first-child{
 }
 
 .archive_section > .archive_section_text > img.logo{
+    aspect-ratio: 1/1;
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -554,7 +554,8 @@ main .image_section img:first-child{
 .archive_section > .archive_section_image{
     flex: 1;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
+    aspect-ratio: 2/3;
     object-fit: cover;
 }
 .archive_section > .archive_section_image > img{
@@ -723,14 +724,19 @@ footer .sns_nav a{
         /*grid-template-columns: 2fr;*/
         /*grid-template-rows: 2fr 1fr;*/
         gap: 0.625rem;
+        width: 90vw;
+        justify-content: center;
 
     }
+    .edit_inner_container .image_container .image_wrap{
+        /*display: flex;*/
+
+    }
+    .edit_inner_container .image_container .main{
+        transform: translateX(-30px);
+    }
+
     .edit_inner_container .image_container > .sub{
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*right: 10px;*/
-        /*width: 400px;*/
-        /*height: 500px;*/
 
         object-fit: cover;
         /*aspect-ratio: 1/1;*/
@@ -749,10 +755,37 @@ footer .sns_nav a{
         font-size: 1.8rem;
     }
 
+    .beginning_section > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 600px;
+        gap: 1rem;
+        /*aspect-ratio: 1/1;*/
+    }
+
+    .beginning_section a{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .archive_section{
+        display: flex;
+    }
+    .archive_section .archive_section_image{
+        /*width: 0%;*/
+    }
+    .archive_section .archive_section_image > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .archive_section .archive_section_text{}
+
+
 }
 
 /*작은 태블릿 이하일 때 적용하게따*/
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
     .edit_section .image_container{
         display: flex;
         & > img{
@@ -765,6 +798,11 @@ footer .sns_nav a{
         flex-direction: column;
         /*align-items: center;*/
         /*justify-content: center;*/
+    }
+    .edit_inner_container > .image_container{
+        width: 100vw;
+        justify-content: center;
+
     }
 
 }

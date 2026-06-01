@@ -1,6 +1,9 @@
 h2{
-    font-size: 2.625rem;
+    font-size: 42px;
     font-weight: 700;
+}
+h3{
+    font-size: 32px;
 }
 .arrow_button{
     font-size: 1.125rem;
@@ -11,7 +14,7 @@ h2{
 }
 .arrow_button.border{
     border: 0.125rem solid #0039b3;
-    width: 6.25rem;
+    width: 80px;
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -141,9 +144,8 @@ header > nav > ul li a{
 /*}*/
 .carousel_container{
     position: relative;
-    /*width: 100%;*/
-    /*height: 100vh;*/
-    background-color: greenyellow;
+    width: 100%;
+    max-height: 100vh;
     overflow: hidden;
 }
 .carousel{
@@ -151,23 +153,20 @@ header > nav > ul li a{
     flex-wrap: nowrap;
     flex-shrink: 0;
     height: 100%;
-    background-color: darkblue;
     cursor: pointer;
 }
 .carousel > .slide{
     width: 100vw;
-    /*height: 100%;*/
-    /*border: 0.0625rem solid black;*/
-    background-color: lightgray;
+    height: 100%;
 }
 video{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 .carousel_container img{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 .slide{
@@ -196,9 +195,9 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.125rem;
-    height: 3.125rem;
-    font-size: 1.875rem;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.4);
     color: #111;
@@ -315,6 +314,7 @@ video{
     overflow: hidden;
     width: 100%;
     height: 100%;
+    min-width: 224px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -461,43 +461,53 @@ main .image_section img:first-child{
 .beginning_section > div{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1000px;
     gap: 1rem;
-
-
-
-
 }
+
 .beginning_section a{
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    aspect-ratio: 4/5;
+
 }
-.beginning_section a div{
-    padding: 50px;
+.beginning_wrap{
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: 0;
+    width: 100%;
+}
+
+.beginning_section a .beginning_information{
+    padding: 50px;
+    /*position: absolute;*/
+    bottom: 0;
+    /*text-wrap: wrap;*/
 
 }
 
 .beginning_section div a .beginning_information h3{
-    font-size: 1.5rem;
+    /*font-size: 32px;*/ /*제 위에 지정해둠.*/
     font-weight: 700;
     color: #111;
-    padding-bottom: 0.625rem;
+    padding-bottom: 20px;
 }
 
 .beginning_section div a .beginning_information p{
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #fff;
 }
 
-.beginning_section button{
+.beginning_section .arrow_button{
     position: absolute;
     bottom: 50px;
-    right: 50px;
+    right: 0;
+    margin-right: 50px;
+    /*transform: translateY(300%);*/
+
 
 }
 .beginning_section div a .arrow_button{
@@ -511,13 +521,14 @@ main .image_section img:first-child{
 /*아카이브 섹션*/
 .archive_section{
     display: flex;
-    background-color: #ffdad6;
+    background-color: var(--color-warm-beige);
     height: 500px;
+    margin: 0 20px;
 
 }
 .archive_section > .archive_section_text{
     position: relative;
-    padding: var(--main-y-padding) var(--main-x-padding);
+    padding: 50px var(--main-x-padding);
 }
 
 .archive_section > .archive_section_text > img.logo{
@@ -530,36 +541,39 @@ main .image_section img:first-child{
 
 
 .archive_section > .archive_section_text > p{
-    margin-top: 50px;
-    font-size: 1.5rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 28px;
     font-weight: 500;
+
     /*margin-bottom: 3.125rem;*/
 }
-
+.archive_section > .archive_section_text{
+    flex: 2;
+    /*position: relative;*/
+}
 .archive_section > .archive_section_text > a{
     position: absolute;
-    bottom: var(--main-y-padding);
+    bottom: 50px;
     text-decoration: none;
     &:hover{
         color: #fff;
         background-color: #0039b3;
     }
 }
-.archive_section > .archive_section_text{
-    flex: 2;
-}
+
 
 
 
 .archive_section > .archive_section_image{
-    flex: 1;
-    width: 100%;
+    flex: 1.5;
+    /*width: 100%;*/
     /*height: 100%;*/
-    aspect-ratio: 2/3;
+    /*aspect-ratio: 4/3;*/
     object-fit: cover;
 }
 .archive_section > .archive_section_image > img{
-    width: 50rem;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -683,12 +697,30 @@ footer .sns_nav a{
 /*******************************************************************/
 /*태블릿 이하일 때 적용하게따*/
 @media screen and (max-width: 1024px) {
+    h3{
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
     .carousel_container{
         /*aspect-ratio: 16/9;*/
         /*width: 100%;*/
         /*height: 50%;*/
         object-fit: cover;
     }
+    .trending_now .arrow_button_container{
+        display: none;
+    }
+    /*.trending_now .image_container{*/
+    /*    width: 200px;*/
+    /*}*/
+
+    /*.trending_now .image_container img{*/
+    /*    aspect-ratio: 1/1;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
+
+
     main .image_section{
         display: flex;
         /*flex-direction: column;*/
@@ -758,26 +790,51 @@ footer .sns_nav a{
     .beginning_section > div{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 600px;
+        /*grid-template-rows: 600px;*/
+        /*max-height: 600px;*/
+        /*width: 100%;*/
+        /*height: 300px;*/
         gap: 1rem;
         /*aspect-ratio: 1/1;*/
     }
+    .beginning_section div a .beginning_information{
+        /*padding: 30px;*/
+    }
+    .beginning_section div a .beginning_information p{
+        font-size: 1.25rem;
+    }
 
     .beginning_section a{
-        width: 100%;
-        height: 100%;
+
+        /*display: block;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
         object-fit: cover;
+        aspect-ratio: 4/5;
     }
+    .beginning_section .arrow_button.border.rounded{
+        /*align-self: center;*/
+        width: 60px;
+
+    }
+
     .archive_section{
         display: flex;
     }
+    .archive_section > .archive_section_text{
+        flex: 2;
+
+    }
     .archive_section .archive_section_image{
+        flex: 1.5;
         /*width: 0%;*/
+
     }
     .archive_section .archive_section_image > img{
-        width: 100%;
-        height: 100%;
+        display: flex;
+        /*height: 100%;*/
         object-fit: cover;
+        width: 100%;
     }
     .archive_section .archive_section_text{}
 
@@ -786,6 +843,67 @@ footer .sns_nav a{
 
 /*작은 태블릿 이하일 때 적용하게따*/
 @media screen and (max-width: 768px) {
+    .carousel_container{
+        max-height: 100vh;
+    }
+    .carousel > .slide{
+        height: 90vh;
+
+    }
+    .button_container button{
+        font-size: 24px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .edit_section > h2{
+        font-size: 100px;
+    }
+
+    .beginning_section > div{
+        display: flex;
+        flex-direction: column;
+    }
+    .beginning_section > .beginning_information{
+        padding: 30px;
+    }
+    .beginning_section div a .beginning_information p{
+        font-size: 18px;
+    }
+
+    .archive_section{
+        /*display: flex;*/
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .archive_section > .archive_section_text{
+        flex-direction: column;
+    }
+    .archive_section > .archive_section_text img.logo{
+        width: 50px;
+        height: 50px;
+    }
+    .archive_section > .archive_section_text > p{
+        font-size: 18px;
+        margin: 50px 0 30px 0;
+
+    }
+    .archive_section > .archive_section_text > a{
+        position: unset;
+    }
+    .archive_section > .archive_section_image{
+        overflow: hidden;
+
+    }
+    .archive_section > .archive_section_image > img{
+        display: flex;
+        object-fit: cover;
+        width: 100VW;
+        aspect-ratio: 3/2;
+    }
+
+
+
     .edit_section .image_container{
         display: flex;
         & > img{
@@ -805,8 +923,10 @@ footer .sns_nav a{
 
     }
 
+    .img_moved
+
 }
 /*모바일일 때 적용하게똬*/
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 480px) {
 
 }

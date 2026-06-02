@@ -1,0 +1,119 @@
+h1{
+    font-size: 2.625rem;
+    font-weight: 600;
+}
+form{
+    margin: 6.25rem 12.5rem;
+}
+
+/**********************************************/
+form > div{
+    display: flex;
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+}
+/*********************************************/
+.cart_section{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+/************************************************************/
+.select_section{
+    display: flex;
+    justify-content: space-between;
+}
+/****************************************************************/
+.product_section{
+    /*display: flex;*/
+
+}
+.products{
+    display: flex;
+    /*align-items: center;*/
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+
+
+}
+.products > #choose{
+    display: inline;
+    justify-content: flex-start;
+
+}
+.product_img{
+    aspect-ratio: 3/4;
+    width: 10vw;
+}
+.product_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.products > .product_info{
+    /*display: flex;*/
+    margin: 0 20px;
+}
+.heart{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+/***********************************************/
+.order_section{
+    flex: 1;
+}
+.order_info{
+    background-color: #f5f5f5;
+    /*display: flex;*/
+    justify-content: center;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+.order_info > .order_detail{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.order_info > .order_detail:first-child{
+    font-size: 18px;
+    font-weight: 600;
+}
+.order_info > .order_detail:nth-child(6){
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/******************************************/
+.coupon{
+    padding: 20px 10px;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.coupon > div > span{
+    padding-left: 6px;
+}
+
+/******************************************/
+.order_button_section{
+    padding: 30px 0;
+}
+.order_button{
+    margin: 30px 0;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.125rem;
+}

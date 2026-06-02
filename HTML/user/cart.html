@@ -12,49 +12,133 @@
 <body>
     <main>
         <form action="cart">
-            <h2>장바구니</h2>
-            <div class="choose_section">
-
-            </div>
-            <div class="product_section">
-                <div class="products">
-                    <div class="product_img">
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <span>라이트 V넥가디건</span>
-                        <p>컬러: 02 LIGHT GRAY
-                            <br>
-                            사이즈: WOMEN M
-                        </p>
-                        <span class="price">39,900원</span>
-                        <p>일부매장제품</p>
-                        <div class="count_section">
-                            <i class="fa-solid fa-minus"></i>
-                            <span>1</span>
-                            <i class="fa-solid fa-plus"></i>
+            <h1>장바구니</h1>
+            <hr>
+            <div>
+                <div class="cart_section">
+                    <div class="select_section">
+                        <div>
+                            <input type="checkbox" id="choose_all">
+                            <lable for="choose_all">전체 선택</lable>
                         </div>
-                        <span>삭제</span>
-                        <p>소계: </p>
-                        <p>39,900원</p>
+                        <div>
+                            <button type="button">선택 삭제</button>
+                        </div>
                     </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
+                    <div class="product_section">
+                        <div class="products">
+                            <input type="checkbox" id="choose">
+                            <div class="product_img">
+                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320"/>
+                            </div>
+                            <div class="product_info">
+                                <span>라이트 V넥가디건</span>
+                                <p>컬러: 02 LIGHT GRAY
+                                    <br>
+                                    사이즈: WOMEN M
+                                </p>
+                                <span class="price">39,900원</span>
+                                <p>일부매장제품</p>
+                                <div class="count_section">
+                                    <i class="fa-solid fa-minus"></i>
+                                    <span>1</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <span>삭제</span>
+                                <p>소계: </p>
+                                <p>39,900원</p>
+                            </div>
+                            <div class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
                     </div>
+                    <div class="product_section">
+                        <div class="products">
+                            <div class="product_img">
+                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320"/>
+                            </div>
+                            <div class="product_info">
+                                <span>라이트 V넥가디건</span>
+                                <p>컬러: 02 LIGHT GRAY
+                                    <br>
+                                    사이즈: WOMEN M
+                                </p>
+                                <span class="price">39,900원</span>
+                                <p>일부매장제품</p>
+                                <div class="count_section">
+                                    <i class="fa-solid fa-minus"></i>
+                                    <span>1</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <span>삭제</span>
+                                <p>소계: </p>
+                                <p>39,900원</p>
+                            </div>
+                            <div class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
                 <div class="order_section">
                     <div class="order_info">
                         <div class="order_detail">
-                            <span>주문상세내역</span>
-                            <span class="count">2</span>
-                            <span>제품</span>
+                            <span>주문 상세내역</span>
+                            <div>
+                                <span class="count">2</span>
+                                <span>제품</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="order_detail">
+                            <span>제품 합계</span>
+                            <div>
+                                <span class="count">79,800</span>
+                                <span>원</span>
+                            </div>
+                        </div>
+                        <div class="order_detail">
+                            <span>배송비</span>
+                            <span>결제 단계에서 확인</span>
+                        </div>
+                        <hr>
+                        <div class="order_detail">
+                            <span>총 결제 금액</span>
+                            <div>
+                                <span class="count">79,800</span>
+                                <span>원</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="order_detail">
+                            <span>세금(VAT)</span>
+                            <div>
+                                <span class="count">7,255</span>
+                                <span>원</span>
+                            </div>
                         </div>
 
+                    </div>
+                    <hr>
+                    <div class="coupon">
+                        <div>
+                            <i class="fa-solid fa-ticket-simple"></i>
+                            <span>쿠폰</span>
+                        </div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <hr>
+                    <div class="order_button_section">
+                        <p>무료 배송 대상 (39,900원 이상 구매 또는 [매장으로 배송] 선택 시)
+                            <br><br>[주문하기] 버튼을 누른 후 30분간 재고가 임시 확보되므로, 빠른 결제 부탁드립니다.</p>
+                        <button type="button" class="order_button">주문하기</button>
                     </div>
 
                 </div>
             </div>
+
 
 
 

@@ -23,6 +23,17 @@ form > div{
 .select_section{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.select_section button{
+    padding: 4px 10px;
+    /*background-color: #111;*/
+    background-color: unset;
+    color: #111;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 /****************************************************************/
 .product_section{
@@ -55,6 +66,39 @@ form > div{
 .products > .product_info{
     /*display: flex;*/
     margin: 0 20px;
+
+}
+.product_info ul:first-child li{
+    padding-bottom: 10px;
+}
+.product_info .count_section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 10px 0;
+    width: 120px;
+    margin-bottom: 10px;
+}
+.product_info .count_section i{
+    cursor: pointer;
+}
+.product_info > button{
+    /*padding: 4px 10px;*/
+    background-color: unset;
+    color: #c30000;
+    border: none;
+    /*border-radius: 10px;*/
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.product_info ul:nth-child(4){
+    display: flex;
+    gap: 10px;
 }
 .heart{
     position: absolute;

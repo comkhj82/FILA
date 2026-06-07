@@ -759,3 +759,153 @@ h3{
 
 
 }
+
+
+/* =========================================================
+   반응형
+   ========================================================= */
+
+/* 1. 태블릿 (1024px 이하)*/
+@media (max-width: 1024px) {
+    /* 메인 섹션 여백 축소 */
+    #main_section .information {
+        padding: 0 40px;
+    }
+    
+    /* 체크포인트, 모델컷 카드 넓이 유연하게 */
+    #checkpoint .card, 
+    #model_cut .card {
+        width: 31%; /* 가로로 3개가 적절히 들어가도록 비율 조정 */
+        margin-right: 2%;
+    }
+    #checkpoint .card:last-child, 
+    #model_cut .card:last-child {
+        margin-right: 0;
+    }
+
+    /* 리뷰 섹션 넓이 및 그리드 조정 */
+    #review .reviews .item .contents .content {
+        width: 100%; /* 고정 800px 해제 */
+    }
+    #review .photo_video > ul {
+        grid-template-columns: repeat(4, 1fr); /* 8열 -> 4열 */
+    }
+    #review ul .date_container {
+        width: auto;
+        padding-left: 20px;
+    }
+}
+
+/* 2. 작은 태블릿 (768px 이하)*/
+@media (max-width: 768px) {
+    /* 높이 100vh 해제 및 상하 배치 */
+    #main_section {
+        height: auto;
+        flex-direction: column;
+    }
+    #main_section > div {
+        flex: none;
+        width: 100%;
+    }
+    #main_section .information {
+        padding: 40px 20px;
+    }
+
+    /* 디테일 인포 영역 상하 배치 */
+    #detail_section {
+        flex-direction: column;
+        margin: 20px;
+    }
+    #detail_section .image_container {
+        position: static; /* sticky 해제 (화면을 따라다니지 않게) */
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    /* 카드들 가로 정렬 해제 후 세로로 쌓기 */
+    #checkpoint .card, 
+    #model_cut .card {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    /* 리뷰 섹션 상하 배치 */
+    #review {
+        margin: 50px 20px;
+    }
+    #review .rating {
+        flex-direction: column; /* 가로 정렬을 세로로 */
+        gap: 30px;
+    }
+    #review .photo_video > ul {
+        grid-template-columns: repeat(3, 1fr); /* 3열로 줄임 */
+    }
+    
+    /* 리뷰 아이템 배치: 내용 위, 날짜 밑으로 */
+    #review .reviews .item {
+        flex-direction: column; 
+    }
+    #review ul .date_container {
+        border-left: none; /* 세로선 제거 */
+        border-top: 1px solid #c8c8c8; /* 가로선 추가 */
+        padding-left: 0;
+        padding-top: 16px;
+        width: 100%;
+    }
+}
+
+/* 3. 모바일 (480px 이하)
+   - 폰트 크기, 패딩, 그리드를 모바일 환경에 꽉 차게 최적화합니다.
+*/
+@media (max-width: 480px) {
+    /* 전체 폰트 크기 축소 */
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+
+    /* 메인 섹션 모바일 패딩 */
+    #main_section .information {
+        padding: 30px 16px;
+    }
+    
+    /* 장바구니 버튼 크기 축소 */
+    #main_section .information .cart > button {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    /* 디테일 이미지 2단 -> 1단(전체화면)으로 길게 */
+    #detail_section .image_container {
+        grid-template-columns: 1fr;
+    }
+    #detail_section .detail_info > div {
+        padding: 16px 0;
+    }
+
+    /* 리뷰 필터 및 정렬 부분 세로 배치 */
+    #review .filter > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    #review .filter .search {
+        width: 100%;
+        display: flex;
+    }
+    #review .filter .search > input {
+        flex: 1;
+    }
+
+    /* 포토/동영상 리뷰 2열로 축소 */
+    #review .photo_video > ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 고객 리뷰 첨부 이미지 썸네일 축소 */
+    #review .images img {
+        width: 80px;
+        height: 80px;
+    }
+}

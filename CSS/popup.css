@@ -150,7 +150,133 @@ body > div{
 
 
 
+/* =========================================================
+   반응형 
+   ========================================================= */
 
+/* 1. 태블릿 (1024px 이하) 
+   - 모달의 가로폭을 넓혀서 답답함을 줄입니다.
+   - 상품 썸네일 크기를 살짝 줄입니다.
+*/
+@media screen and (max-width: 1024px) {
+    .modal {
+        width: 85%; 
+        height: 85%;
+    }
+    
+    .modal .form_section .product_item label {
+        grid-template-columns: 100px 1fr; /* 썸네일 크기 축소 */
+    }
+    
+    .modal .form_section .product_item img {
+        height: 100px;
+    }
+}
+
+/* 2. 작은 태블릿 (768px 이하) 
+   - 좌우 분할을 상하 분할로 변경합니다. (이미지가 위, 폼이 아래)
+*/
+@media screen and (max-width: 768px) {
+    .modal {
+        flex-direction: column; /* 가로 배치 -> 세로 배치 */
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+        overflow: hidden; /* 이미지가 모달 둥근 모서리를 벗어나지 않게 처리 */
+    }
+
+    .modal > section {
+        flex: none; /* 기존 flex: 1 속성 해제 */
+    }
+
+    .modal .img_section {
+        height: 35%; /* 상단 이미지 영역 비중 */
+    }
+
+    .modal .form_section {
+        height: 65%; /* 하단 폼 영역 비중 */
+    }
+    
+    /* 폼 영역이 세로로 바뀌면서 높이 계산을 다시 해줍니다. (버튼과 겹침 방지) */
+    .modal .form_section .product_container {
+        height: calc(100% - 170px); 
+    }
+}
+
+/* 3. 모바일 (480px 이하) 
+   - 모달을 화면에 꽉 차게(Full Screen) 만듭니다.
+   - 전체적인 여백(Padding)과 폰트 크기, 썸네일 크기를 모바일에 맞게 축소합니다.
+*/
+@media screen and (max-width: 480px) {
+    :root {
+        --modal-form-padding: 16px; /* 좌우 기본 여백 축소 */
+    }
+
+    .modal {
+        width: 100%; 
+        height: 100%;
+        border-radius: 0; /* 모바일에서는 각진 모서리로 화면에 밀착 */
+    }
+
+    .modal .img_section {
+        height: 25%; /* 스크롤 공간 확보를 위해 이미지 영역 축소 */
+    }
+
+    .modal .form_section {
+        height: 75%;
+    }
+
+    /* 상품 목록 썸네일 및 그리드 간격 모바일 사이즈로 조정 */
+    .modal .form_section .product_item label {
+        grid-template-columns: 70px 1fr; 
+        grid-column-gap: 12px;
+    }
+
+    .modal .form_section .product_item img {
+        height: 70px;
+    }
+
+    /* 폰트 크기 축소 */
+    .modal .form_section .product_item b {
+        font-size: 14px;
+    }
+    
+    .modal .form_section .product_item strong {
+        font-size: 16px;
+    }
+
+    /* 각 컨테이너 여백 및 폰트 미세 조정 */
+    .modal .form_section .select_all_container {
+        padding: 16px var(--modal-form-padding);
+        font-size: 15px;
+    }
+
+    .modal .total_price_container {
+        font-size: 16px;
+        padding: 16px var(--modal-form-padding);
+    }
+
+    .modal .form_section .product_size {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    /* 하단 장바구니 버튼 모바일 사이즈 최적화 */
+    .modal .submit_container {
+        bottom: 16px;
+    }
+
+    .modal .submit_container > button {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+    
+    /* 모바일 높이에 맞춘 스크롤 컨테이너 비율 조정 */
+    .modal .form_section .product_container {
+        height: calc(100% - 130px); 
+    }
+}
 
 
 

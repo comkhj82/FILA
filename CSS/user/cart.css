@@ -1,6 +1,7 @@
 h1{
     font-size: 2.625rem;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 form{
     margin: 6.25rem 12.5rem;
@@ -24,6 +25,12 @@ form > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+}
+.select_section > div{
+    display: flex;
+    gap: 20px;
 }
 .select_section button{
     padding: 4px 10px;
@@ -37,23 +44,28 @@ form > div{
 }
 /****************************************************************/
 .product_section{
-    /*display: flex;*/
-
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
 }
+
 .products{
     display: flex;
     /*align-items: center;*/
+    flex: 1; /*체크박스가 차지하는 공간을 제외한 나머지 넓이를 상품 영역이 모두 채우도록 합니다 */
     position: relative;
-    border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 
 
 }
 .products > #choose{
-    display: inline;
-    justify-content: flex-start;
+
 
 }
+
+
+
 .product_img{
     aspect-ratio: 3/4;
     width: 10vw;
@@ -67,6 +79,15 @@ form > div{
     /*display: flex;*/
     margin: 0 20px;
 
+}
+.product_info ul:first-child li:first-child{
+    /*상품명*/
+    font-size: 18px;
+    font-weight: 600;
+}
+.product_info ul:first-child li:nth-child(4){
+    font-size: 18px;
+    font-weight: 600;
 }
 .product_info ul:first-child li{
     padding-bottom: 10px;
@@ -106,6 +127,10 @@ form > div{
     font-size: 20px;
     cursor: pointer;
 
+}
+.heart.active{
+    color: #c30000;
+    /*display: none;*/
 }
 /***********************************************/
 .order_section{

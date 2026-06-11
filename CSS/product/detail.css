@@ -771,14 +771,14 @@ h3{
     #main_section .information {
         padding: 0 40px;
     }
-    
+
     /* 체크포인트, 모델컷 카드 넓이 유연하게 */
-    #checkpoint .card, 
+    #checkpoint .card,
     #model_cut .card {
         width: 31%; /* 가로로 3개가 적절히 들어가도록 비율 조정 */
         margin-right: 2%;
     }
-    #checkpoint .card:last-child, 
+    #checkpoint .card:last-child,
     #model_cut .card:last-child {
         margin-right: 0;
     }
@@ -823,7 +823,7 @@ h3{
     }
 
     /* 카드들 가로 정렬 해제 후 세로로 쌓기 */
-    #checkpoint .card, 
+    #checkpoint .card,
     #model_cut .card {
         display: block;
         width: 100%;
@@ -842,10 +842,10 @@ h3{
     #review .photo_video > ul {
         grid-template-columns: repeat(3, 1fr); /* 3열로 줄임 */
     }
-    
+
     /* 리뷰 아이템 배치: 내용 위, 날짜 밑으로 */
     #review .reviews .item {
-        flex-direction: column; 
+        flex-direction: column;
     }
     #review ul .date_container {
         border-left: none; /* 세로선 제거 */
@@ -869,7 +869,7 @@ h3{
     #main_section .information {
         padding: 30px 16px;
     }
-    
+
     /* 장바구니 버튼 크기 축소 */
     #main_section .information .cart > button {
         padding: 16px 20px;
@@ -902,10 +902,28 @@ h3{
     #review .photo_video > ul {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     /* 고객 리뷰 첨부 이미지 썸네일 축소 */
     #review .images img {
         width: 80px;
         height: 80px;
     }
+}
+
+/*==========================================
+반응형
+ ====================================*/
+/*태블릿 이하일 때 적용하게따*/
+@media screen and (max-width: 1024px) {
+
+}
+
+/*작은 태블릿일 때 적용~*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*모바일일 때 적용하게똬*/
+@media screen and (max-width: 480px) {
+
 }

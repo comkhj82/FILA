@@ -1,10 +1,10 @@
 h1{
-    font-size: 2.625rem;
+    font-size: 42px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 form{
-    margin: 6.25rem 12.5rem;
+    margin: 100px 200px;
 }
 
 /**********************************************/
@@ -185,4 +185,102 @@ form > div{
     border-radius: 30px;
     cursor: pointer;
     font-size: 1.125rem;
+}
+
+
+/*==========================================
+반응형
+====================================*/
+
+/* 1. 태블릿 (1024px 이하): 전체적인 여백 축소 및 비율 조정 */
+@media screen and (max-width: 1024px) {
+    form {
+        /* 기존 6.25rem 12.5rem에서 양옆 여백을 줄여 화면 공간 확보 */
+        margin: 64px 80px;
+    }
+
+    .product_img {
+        /* 화면이 좁아짐에 따라 이미지 영역 비율 조정 */
+        width: 15vw;
+    }
+}
+
+/* 2. 작은 태블릿 (768px 이하): 2단 레이아웃을 1단으로 변경 */
+@media screen and (max-width: 768px) {
+    form {
+        margin: 48px 32px;
+    }
+
+    form > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart_section, .order_section {
+        width: 100%;
+    }
+
+    .product_img {
+        /* vw 대신 고정값을 주어 이미지가 너무 작아지는 현상 방지 */
+        width: 140px;
+    }
+}
+
+/* 3. 모바일 (480px 이하): 폰트 사이즈 및 내부 패딩 최소화 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    form {
+        margin: 24px 16px;
+    }
+
+
+
+    .product_section {
+        gap: 10px;
+    }
+
+    .products {
+        padding-bottom: 15px;
+    }
+
+    .product_img {
+        width: 100px; /* 모바일에 맞게 이미지 크기 축소 */
+    }
+
+    .products > .product_info {
+        margin: 0 0 0 15px;
+    }
+
+    .product_info ul:first-child li:first-child,
+    .product_info ul:first-child li:nth-child(4) {
+        font-size: 16px; /* 모바일 가독성을 위해 상품명 및 가격 폰트 크기 조정 */
+    }
+
+    .product_info .count_section {
+        width: 100px;
+        padding: 5px 0;
+        gap: 15px;
+    }
+
+    .heart {
+        top: 0;
+        right: 0;
+        font-size: 18px;
+    }
+
+    .order_info {
+        padding: 20px 15px; /* 주문 상세내역 박스 패딩 축소 */
+    }
+
+    .order_info > .order_detail {
+        font-size: 15px;
+    }
+
+    .order_info > .order_detail:first-child,
+    .order_info > .order_detail:nth-child(6) {
+        font-size: 16px;
+    }
 }

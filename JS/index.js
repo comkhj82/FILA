@@ -127,6 +127,147 @@ for(let i = 0; i < trendingButtons.length; i++){
     }
 }
 
+/* index.js의 기존 trendingButtons 코드 아래에 추가 */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const trendingLists = document.querySelectorAll('.trending_now > ul');
+
+    // =========================================================
+    // 1. 마우스 드래그 및 모바일 터치 스와이프 기능
+    // =========================================================
+    trendingLists.forEach(list => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // 브라우저 기본 이미지 드래그(잔상 생기는 현상) 방지
+        const images = list.querySelectorAll('img');
+        images.forEach(img => img.addEventListener('dragstart', (e) => e.preventDefault()));
+
+        // --- PC 마우스 이벤트 ---
+        list.addEventListener('mousedown', (e) => {
+            isDown = true;
+            list.style.cursor = 'grabbing'; // 드래그 중 움켜쥔 손바닥 모양
+            startX = e.pageX - list.offsetLeft;
+            scrollLeft = list.scrollLeft;
+        });
+
+        list.addEventListener('mouseleave', () => {
+            isDown = false;
+            list.style.cursor = 'grab';
+        });
+
+        list.addEventListener('mouseup', () => {
+            isDown = false;
+            list.style.cursor = 'grab';
+        });
+
+        list.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - list.offsetLeft;
+            const walk = (x - startX) * 1.5; // 스크롤 속도 배율 (숫자를 키우면 휙휙 넘어감)
+            list.scrollLeft = scrollLeft - walk;
+        });
+
+        // --- 모바일 터치 이벤트 ---
+        list.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - list.offsetLeft;
+            scrollLeft = list.scrollLeft;
+        });
+
+        list.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        list.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - list.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            list.scrollLeft = scrollLeft - walk;
+        });
+    });
+
+    // =========================================================
+    // 2. 화살표 버튼 클릭 시 스크롤 이동 기능
+    // =========================================================
+    // 해당 섹션 안의 화살표 버튼들을 모두 찾습니다. (왼쪽, 오른쪽 순서라고 가정)
+    const arrowBtns = document.querySelectorAll('.trending_now .arrow_button');
+
+    function scrollActiveList(direction) {
+        // 여러 개의 탭 중 현재 화면에 보이는(active) 리스트만 선택해서 움직입니다.
+        const activeList = document.querySelector('.trending_now > ul.active');
+        if (!activeList) return;
+
+        const scrollAmount = 400; // 한 번 클릭할 때 이동할 픽셀 거리 (상품 1개 너비 정도로 조절하세요)
+
+        if (direction === 'left') {
+            activeList.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); // 왼쪽으로 부드럽게 스크롤
+        } else {
+            activeList.scrollBy({ left: scrollAmount, behavior: 'smooth' });  // 오른쪽으로 부드럽게 스크롤
+        }
+    }
+
+    // 버튼이 정상적으로 찾아졌다면 첫 번째를 왼쪽, 두 번째를 오른쪽 화살표로 지정합니다.
+    if (arrowBtns.length >= 2) {
+        arrowBtns[0].addEventListener('click', () => scrollActiveList('left'));
+        arrowBtns[1].addEventListener('click', () => scrollActiveList('right'));
+    }
+});
+
+////////////////////////////////////////////////////////////
+////////////////슬라이드 이미지
+document.addEventListener("DOMContentLoaded", () => {
+    // 회원님이 지정하신 정확한 클래스명을 사용합니다.
+    const slideWrapper = document.querySelector('.slide_wrapper');
+    const slideContainer = document.querySelector('.slide_container');
+
+    if (!slideWrapper || !slideContainer) return;
+
+    // 1. 끊김 없는 무한 흐름을 만들기 위해 내부 이미지들을 똑같이 1세트 복제해서 이어 붙입니다.
+    const originalItems = Array.from(slideContainer.children);
+    originalItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        slideContainer.appendChild(clone);
+    });
+
+    // 2. 흘러가는 애니메이션을 위한 변수 설정
+    let currentPos = 0;
+    let animationId;
+    const speed = 1.2; // 슬라이드 속도 (숫자를 키우면 더 빨리 지나갑니다)
+
+    // 3. 계속해서 이동시키는 핵심 함수
+    function slideContinuously() {
+        currentPos -= speed;
+
+        // 컨테이너가 복제본을 포함한 전체 길이의 절반(즉, 원본 아이템 세트의 끝)만큼 이동했을 때
+        // 위치를 감쪽같이 0으로 되돌려서 무한 루프를 만듭니다.
+        if (Math.abs(currentPos) >= slideContainer.scrollWidth / 2) {
+            currentPos = 0;
+        }
+
+        // 요소 순서를 뒤섞지 않고 transform으로 부드럽게 위치만 밀어냅니다.
+        slideContainer.style.transform = `translateX(${currentPos}px)`;
+
+        // 브라우저 주사율에 맞춰 끊김 없이 함수를 무한 반복 실행합니다.
+        animationId = requestAnimationFrame(slideContinuously);
+    }
+
+    // 초기 애니메이션 실행
+    slideContinuously();
+
+    // 4. (선택) 마우스 올리면 멈추고 팝업 누를 수 있게 하기
+    slideWrapper.addEventListener('mouseenter', () => {
+        cancelAnimationFrame(animationId);
+    });
+
+    slideWrapper.addEventListener('mouseleave', () => {
+        animationId = requestAnimationFrame(slideContinuously);
+    });
+});
+
     //////////////////////////////////////////////////////
 ///////팝업창
 const popup = document.querySelector('.modal_container');

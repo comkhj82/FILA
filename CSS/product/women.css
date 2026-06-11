@@ -70,8 +70,8 @@ body{
 /*상품 그리드 */
 .product_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    
+    grid-template-columns: repeat(4, 1fr);
+
     column-gap: 15px;
     row-gap: 50px;
 }
@@ -226,7 +226,7 @@ body{
     line-height: 1.4;
     margin-bottom: 6px;
     cursor: pointer;
-    
+
 }
 
 .info_box .price {
@@ -305,9 +305,9 @@ body{
     }
 
     /* 상품 그리드 레이아웃 조절 (클래스명에 맞춰 적용) */
-    .product_grid, 
+    .product_grid,
     .product_list,
-    main.container > section:URI-or-class-selector-placeholder { 
+    main.container > section:URI-or-class-selector-placeholder {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important; /* 4열 -> 3열 */
         column-gap: 16px;
@@ -322,20 +322,23 @@ body{
     }
 
     .page_title {
-        font-size: 28px; /* 타이틀 크기 축소 */
+        font-size: 32px; /* 타이틀 크기 축소 */
     }
 
     /* 필터 레이아웃 정렬 */
+    .filter_tags {
+        gap: 6px;
+    }
     .filter_options {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     /* 상품 그리드 레이아웃 조절 */
-    .product_grid, 
-    .product_list { 
+    .product_grid,
+    .product_list {
         grid-template-columns: repeat(2, 1fr) !important; /* 3열 -> 2열 */
         column-gap: 12px;
         row-gap: 32px;
@@ -350,7 +353,7 @@ body{
 /* 3. 모바일 (480px 이하)*/
 @media (max-width: 480px) {
     body {
-        margin: 20px 15px; 
+        margin: 20px 15px;
     }
 
     .page_title {
@@ -360,7 +363,7 @@ body{
 
     .filter_tags {
         display: flex;
-        gap: 8px;
+        gap: 4px;
         margin: 20px 0;
         overflow-x: auto; /* 가로 스크롤 활성화 */
         white-space: nowrap; /* 자동 줄바꿈 방지 */
@@ -388,8 +391,8 @@ body{
     }
 
     /* 상품 그리드 간격 좁히기 (모바일 최적화 2열 구조) */
-    .product_grid, 
-    .product_list { 
+    .product_grid,
+    .product_list {
         grid-template-columns: repeat(2, 1fr) !important;
         column-gap: 8px;
         row-gap: 24px;

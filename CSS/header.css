@@ -149,3 +149,21 @@ header .sub_menu > li > a{
         text-decoration: underline;
     }
 }
+
+/*==========================================
+반응형
+ ====================================*/
+/*태블릿 이하일 때 적용하게따*/
+@media screen and (max-width: 1024px) {
+
+}
+
+/*작은 태블릿일 때 적용~*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*모바일일 때 적용하게똬*/
+@media screen and (max-width: 480px) {
+
+}

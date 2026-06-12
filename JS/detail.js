@@ -62,4 +62,98 @@ window.onload = () => {
             }
         };
     });
+
+    // ==========================================
+    // 3. 모바일 제품 이미지 캐러셀 상태바 업데이트
+    // ==========================================
+    const imageContainer = document.querySelector('#detail_section .image_container');
+    const dots = document.querySelectorAll('#detail_section .carousel_status .dot');
+
+    if (imageContainer && dots.length > 0) {
+        imageContainer.onscroll = function() {
+            // 현재 스크롤 위치를 기반으로 인덱스 계산
+            const scrollLeft = imageContainer.scrollLeft;
+            const width = imageContainer.clientWidth;
+            const index = Math.round(scrollLeft / width);
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+    }
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    // =========================================================
+    // 만능 드래그 & 스와이프 함수
+    // =========================================================
+    function makeDraggable(container) {
+        if (!container) return; // 요소가 없으면 에러 방지
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // --- PC 마우스 이벤트 ---
+        container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            container.style.cursor = 'grabbing';
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2; // 스크롤 속도 배율
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        // --- 모바일 터치 이벤트 ---
+        container.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // =========================================================
+    // 원하는 요소에 드래그 함수 적용하기
+    // =========================================================
+    const swipeWrappers = document.querySelectorAll('.swipe_wrapper');
+    swipeWrappers.forEach(wrapper => {
+        makeDraggable(wrapper);
+    });
+
+    // (선택) 이전에 만드신 photo_video가 있다면 함께 적용 가능
+    const photoVideoSection = document.querySelector('.photo_video');
+
+
+    makeDraggable(photoVideoSection);
+});

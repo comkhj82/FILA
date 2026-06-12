@@ -1,9 +1,9 @@
 h2{
-    font-size: 2.625rem;
+    font-size: 42px;
     font-weight: 700;
 }
 h3{
-    font-size: 2rem;
+    font-size: 32px;
 }
 .arrow_button{
     font-size: 1.125rem;
@@ -13,15 +13,15 @@ h3{
     background-color: rgb(255 255 255 / 0.5);
 }
 .arrow_button.border{
-    border: 0.125rem solid #0039b3;
-    width: 5rem;
-    height: 2.5rem;
+    border: 2px solid #0039b3;
+    width: 80px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .arrow_button.rounded{
-    border-radius: 1.25rem;
+    border-radius: 20px;
 }
 :root{ /*html문서를 뜻함.*/
     --main-y-padding: 6.25rem;
@@ -36,7 +36,7 @@ h3{
 
 .coupon_info_container{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     background-color: #0039b3;
     color: white;
@@ -169,6 +169,13 @@ video{
     height: 100%;
     object-fit: cover;
 }
+
+.carousel_container .carousel .slide .mobile_banner {
+    display: none; /* 평소엔 모바일 배너 숨김 */
+}
+
+
+
 .slide{
     position: relative;
 }
@@ -226,8 +233,8 @@ video{
 }
 
 .trending_now > h2{
-    padding-top: 3.125rem;
-    padding-left: 0.625rem;
+    padding-top: 50px;
+    padding-left: 10px;
 }
 
 .trending_now > div{
@@ -261,7 +268,7 @@ video{
     background: unset;
     border: none;
     padding: 0.625rem;
-    font-size: 1.125rem;
+    font-size: 18px;
 
 }
 .trending_now li .btn.active{
@@ -281,8 +288,8 @@ video{
 
 
 .trending_now > ul > li{
-    width: 18.75rem;
-    padding: 0.625rem;
+    width: 300px;
+    padding: 10px;
     padding-left: 0;
     flex-shrink: 0; /* 컨테이너가 좁아져도 상품 크기가 찌그러지지 않게 고정 */
 
@@ -330,16 +337,16 @@ video{
 }
 
 .trending_now > ul > li > a span{
-    font-size: 1.125rem;
+    font-size: 14px;
     font-weight: 400;
-    padding-bottom: 0.625rem;
+    padding-bottom: 10px;
 }
 .trending_now > ul > li > a .image_container img{
     /*padding: 0.25rem;*/
     overflow: hidden;
     width: 100%;
     height: 100%;
-    min-width: 12.5rem;
+    min-width: 100px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -352,8 +359,8 @@ video{
     justify-content: center;
     text-align: center;
 
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 24px;
+    line-height: 140%;
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 
@@ -479,7 +486,7 @@ main .image_section img:first-child{
 }
 
 .beginning_section > h2{
-    padding-bottom: 1.25rem;
+    padding-bottom: 20px;
 
 }
 
@@ -506,7 +513,7 @@ main .image_section img:first-child{
 }
 
 .beginning_section a .beginning_information{
-    padding: 3.125rem;
+    padding: 50px;
     /*position: absolute;*/
     bottom: 0;
     /*text-wrap: wrap;*/
@@ -517,20 +524,20 @@ main .image_section img:first-child{
     /*font-size: 2rem;*/ /*제 위에 지정해둠.*/
     font-weight: 700;
     color: #111;
-    padding-bottom: 1.25rem;
+    padding-bottom: 20px;
 }
 
 .beginning_section div a .beginning_information p{
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     color: #fff;
 }
 
 .beginning_section .arrow_button{
     position: absolute;
-    bottom: 3.125rem;
+    bottom: 50px;
     right: 0;
-    margin-right: 3.125rem;
+    margin-right: 50px;
 
     /*transform: translateY(300%);*/
 
@@ -732,7 +739,7 @@ footer .sns_nav a{
 
 /*******************************************************************/
 /*태블릿 이하일 때 적용하게따*/
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1024px) {
     h3{
         font-size: 1.75rem;
         font-weight: 700;
@@ -779,7 +786,7 @@ footer .sns_nav a{
         /*margin: 0;*/
     }
     .edit_section > h2{
-        font-size: 8.125rem;
+        font-size: 130px;
         z-index: 1;
     }
     .edit_inner_container{
@@ -833,11 +840,23 @@ footer .sns_nav a{
         gap: 1rem;
         /*aspect-ratio: 1/1;*/
     }
+    .beginning_section > div .beginning_wrap{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-right: 10px;
+    }
     .beginning_section div a .beginning_information{
         /*padding: 1.875rem;*/
     }
     .beginning_section div a .beginning_information p{
-        font-size: 1.25rem;
+        font-size: 24px;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+
     }
 
     .beginning_section a{
@@ -850,7 +869,7 @@ footer .sns_nav a{
     }
     .beginning_section .arrow_button.border.rounded{
         /*align-self: center;*/
-        width: 3.75rem;
+        width: 80px;
 
     }
 
@@ -873,6 +892,9 @@ footer .sns_nav a{
         width: 100%;
     }
     .archive_section .archive_section_text{}
+    footer div ul li a{
+        font-size: 16px;
+    }
 
 
 }
@@ -930,7 +952,10 @@ footer .sns_nav a{
         padding: 1.875rem;
     }
     .beginning_section div a .beginning_information p{
-        font-size: 1.125rem;
+        font-size: 24px;
+    }
+    .beginning_section .arrow_button.border.rounded{
+        width: 80px;
     }
 
     .archive_section{
@@ -946,7 +971,7 @@ footer .sns_nav a{
         height: 50px;
     }
     .archive_section > .archive_section_text > p{
-        font-size: 1.125rem;
+        font-size: 24px;
         margin: 3.125rem 0 1.875rem 0;
 
     }
@@ -960,7 +985,7 @@ footer .sns_nav a{
     .archive_section > .archive_section_image > img{
         display: flex;
         object-fit: cover;
-        width: 100VW;
+        width: 100%;
         aspect-ratio: 3/2;
     }
 
@@ -977,6 +1002,12 @@ footer .sns_nav a{
         flex-direction: column;
         gap: 20px;
 
+    }
+    footer div h4{
+        font-size: 16px;
+    }
+    footer div ul li a{
+        font-size: 14px;
     }
     footer .site_nav{
         width: 100%;
@@ -1005,20 +1036,105 @@ footer .sns_nav a{
     h2{
         font-size: 32px;
     }
+    .carousel_container .carousel .slide .desktop_banner {
+        display: none; /* 데스크탑 배너 숨김 */
+    }
+
+    .carousel_container .carousel .slide .mobile_banner {
+        display: block; /* 모바일 배너 보여줌 */
+        width: 100%;    /* 모바일 가로 꽉 차게 */
+    }
+
+
+
     .trending_now > ul > li{
         width: 200px;
         height: 100%;
         flex-shrink: 0;
     }
+    .paragraph_section > p{
+        font-size: 18px;
+    }
     main .image_section{
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        /*width: 100%;*/
     }
     main .image_section img{
         width: 100%;
         /*aspect-ratio: 1/1;*/
     }
+
+    .edit_section > h2{
+        font-size: 70px;
+    }
+    /*.beginning_wrap{*/
+    /*    !*display: flex;*!*/
+    /*    !*flex-direction: column;*!*/
+    /*}*/
+    /*.beginning_section a .beginning_information{*/
+    /*    padding: 20px;*/
+    /*    flex: 2;*/
+    /*}*/
+    /*.beginning_section .arrow_button{*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    !*justify-content: end;*!*/
+    /*    align-items: flex-end;*/
+    /*    !*bottom: 0;*!*/
+    /*    !*right: 0;*!*/
+    /*    margin-right: 20px;*/
+    /*    margin-bottom: 10px;*/
+    /*    !*transform: translateY(400%);*!*/
+    /*    !*width: 30px;*!*/
+    /*}*/
+
+    /*.beginning_section div a .beginning_information p{*/
+    /*    font-size: 18px;*/
+    /*}*/
+    /*.beginning_section .arrow_button.border.rounded{*/
+    /*    width: 80px;*/
+    /*}*/
+
+
+    /* 1. 두 요소를 감싸는 부모를 하단(flex-end) 기준으로 정렬합니다 */
+    .beginning_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; /* 핵심: 텍스트와 버튼을 무조건 바닥 쪽에 딱 붙여서 나란히 정렬 */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px; /* 텍스트와 버튼 각각에 주던 패딩을 부모 쪽에 한 번에 줍니다 */
+        box-sizing: border-box; /* 패딩 때문에 100% 너비가 삐져나가지 않게 방지 */
+    }
+
+    /* 2. 텍스트 영역 설정 */
+    .beginning_section a .beginning_information {
+        padding: 0; /* 부모인 wrap에서 패딩을 줬으므로 여기선 제거 */
+        padding-right: 15px; /* 버튼과 글자가 너무 안 붙게 간격 살짝 띄우기 */
+        flex: 1; /* 남는 공간을 텍스트 영역이 쫙 차지하게 함 */
+    }
+
+    .beginning_section div a .beginning_information p {
+        font-size: 18px;
+    }
+
+    /* 3. 우측 하단 화살표 버튼 설정 */
+    .beginning_section .arrow_button {
+        position: static; /* 핵심: 데스크탑의 absolute(절대위치)를 해제하고 Flex 흐름에 합류시킴 */
+        margin: 0; /* 잡다한 마진 전부 제거 */
+        flex-shrink: 0; /* 텍스트가 길어져도 버튼(80px)이 찌그러지지 않게 강제 고정 */
+    }
+
+    .beginning_section .arrow_button.border.rounded {
+        width: 80px;
+    }
+
+    .archive_section > .archive_section_text > p{
+        font-size: 18px;
+    }
+
 
     footer .site_nav > div{
         padding-right: 12px;

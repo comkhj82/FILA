@@ -5,16 +5,22 @@
     padding: 4px 18px;
 }
 h1{
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 600;
 }
 h2{
-    font-size: 28px;
+    font-size: 42px;
     font-weight: 700;
 }
 h3{
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
+}
+.accordion > .head span,
+.cart button b,
+.cart button strong,
+#review > button{
+    font-size: 18px;
 }
 /********************************************/
 /*아코디언 디자인*/
@@ -75,6 +81,7 @@ h3{
 /*main*/
 #main_section{
     display: flex;
+    flex-direction: row;
     height: 100vh;
     background-color: #767676;
 
@@ -430,17 +437,19 @@ h3{
 }
 #checkpoint .card{
     display: inline-block;
-    width: 400px;
+    /*width: 400px;*/
+    width: 30%;
     margin-right: 20px;
 
 }
 #checkpoint .card h3{
-    font-size: 20px;
+    /*font-size: 20px;*/
     font-weight: 600;
     margin: 10px 0;
 }
 #checkpoint .card p{
     line-height: 130%;
+    font-size: 18px;
 }
 #checkpoint .card .image_container{
     aspect-ratio: 1 / 1;
@@ -468,7 +477,7 @@ h3{
 }
 #model_cut .card{
     display: inline-block;
-    width: 400px;
+    width: 30%;
     margin-right: 20px;
 
 }
@@ -495,36 +504,65 @@ h3{
     border: none;
     background-color: #b6c4ff;
     border-radius: 4px;
-    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
 }
 #review .rating{
     display: flex;
-    /*justify-content: flex-start;*/
+    /*justify-content: center;*/
     align-items: center;
-    gap: 100px;
-    margin: 20px 0;
-
+    gap: clamp(20px, 8vw, 100px);
+    margin: 40px 0;
+    text-align: center;
 }
-#review .rating > div{
-    /*flex: 1;*/
+#review .rating > div:first-child{
+    flex-shrink: 0;
 }
 #review .rating > div > span{
-    display: block; /*이거 뭐지... 무슨 메커니즘이지*/
+    display: block;
     font-size: 16px;
     font-weight: 500;
 }
 #review .rating > .total_rating{
-    /*flex: 3;*/
+    flex: 1;
+    width: 100%;
+    /*max-width: 500px;*/
     font-size: 18px;
+}
+#review .rating > .total_rating > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    margin-bottom: 8px;
+}
+#review .rating > div:first-child{
+    width: 40%;
+}
+#review .rating > .total_rating{
+    width: 60%;
+}
+#review .total_rating .title {
+    width: 80px;
+    text-align: left;
+    font-size: 16px;
+}
+#review .total_rating .stars {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    color: #ff9900;
 
 }
 #review .rating > .total_rating .stars i{
-    margin: 0 20px;
+    margin: 0 2px;
+
 }
-#review .rating{
-    text-align: center;
+#review .total_rating .count {
+    width: 40px;
+    text-align: right;
+    font-size: 16px;
+    color: #767676;
 }
 #review .rating > span{
     display: block;
@@ -537,8 +575,20 @@ h3{
 
 /**************************************************/
 /*포토&동영상*/
-.photo_video{
+.photo_video {
     overflow: hidden;
+}
+.photo_video > ul{
+    overflow-x: auto; /* 핵심: 가로 스크롤 허용 */
+    cursor: grab; /* 마우스 올리면 손바닥 모양 */
+    gap: 15px; /* 이미지 사이 간격 */
+
+    /* 스크롤바 숨기기 (깔끔하게) */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.photo_video::-webkit-scrollbar {
+    display: none;
 }
 #review .photo_video > .header{
     display: flex;
@@ -573,6 +623,8 @@ h3{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    flex-shrink: 0;
+    pointer-events: none; /* 드래그할 때 이미지가 잡히지 않게 방지 */
 }
 #review .photo_video > ul li{
     overflow: hidden;
@@ -657,6 +709,14 @@ h3{
     /*flex: 3;*/
 
 }
+
+#review .reviews .item .contents{
+    flex: 3;
+}
+#review .reviews .item .date_container{
+    flex: 1;
+}
+
 #review .reviews .item .contents .content{
     width: 800px;
     display: flex;
@@ -683,7 +743,7 @@ h3{
 
 
 }
-#review > ul .date_container > span{
+.reviews > ul .date_container > span{
     color: #767676;
     font-size: 14px;
 }
@@ -749,6 +809,9 @@ h3{
     overflow: hidden;
 
 }
+#review .images{
+    margin-top: 20px;
+}
 #review .images img{
     display: flex;
     gap: 10px;
@@ -783,12 +846,16 @@ h3{
         margin-right: 0;
     }
 
+
     /* 리뷰 섹션 넓이 및 그리드 조정 */
+    #review .rating > .total_rating > div{
+        width: 100%;
+    }
     #review .reviews .item .contents .content {
         width: 100%; /* 고정 800px 해제 */
     }
     #review .photo_video > ul {
-        grid-template-columns: repeat(4, 1fr); /* 8열 -> 4열 */
+        /*grid-template-columns: repeat(4, 1fr); !* 8열 -> 4열 *!*/
     }
     #review ul .date_container {
         width: auto;
@@ -798,14 +865,34 @@ h3{
 
 /* 2. 작은 태블릿 (768px 이하)*/
 @media (max-width: 768px) {
+    h1{
+        font-size: 42px;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .accordion > .head span,
+    .cart button b,
+    .cart button strong,
+    #review > button{
+        font-size: 16px;
+    }
+
     /* 높이 100vh 해제 및 상하 배치 */
     #main_section {
         height: auto;
-        flex-direction: column;
+        /*flex-direction: column;*/
     }
     #main_section > div {
-        flex: none;
-        width: 100%;
+        height: auto;
+        /*flex: none;*/
+        /*width: 100%;*/
     }
     #main_section .information {
         padding: 40px 20px;
@@ -825,22 +912,18 @@ h3{
     /* 카드들 가로 정렬 해제 후 세로로 쌓기 */
     #checkpoint .card,
     #model_cut .card {
-        display: block;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 40px;
+        /*display: block;*/
+        /*width: 100%;*/
+        /*margin-right: 0;*/
+        /*margin-bottom: 40px;*/
     }
 
     /* 리뷰 섹션 상하 배치 */
     #review {
-        margin: 50px 20px;
-    }
-    #review .rating {
-        flex-direction: column; /* 가로 정렬을 세로로 */
-        gap: 30px;
+        /*margin: 50px 20px;*/
     }
     #review .photo_video > ul {
-        grid-template-columns: repeat(3, 1fr); /* 3열로 줄임 */
+        /*grid-template-columns: repeat(3, 1fr); !* 3열로 줄임 *!*/
     }
 
     /* 리뷰 아이템 배치: 내용 위, 날짜 밑으로 */
@@ -849,9 +932,9 @@ h3{
     }
     #review ul .date_container {
         border-left: none; /* 세로선 제거 */
-        border-top: 1px solid #c8c8c8; /* 가로선 추가 */
+        /*border-top: 1px solid #c8c8c8; !* 가로선 추가 *!*/
         padding-left: 0;
-        padding-top: 16px;
+        /*padding-top: 16px;*/
         width: 100%;
     }
 }
@@ -865,28 +948,86 @@ h3{
     h2 { font-size: 24px; }
     h3 { font-size: 20px; }
 
+
+    #main_section{
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: center;*/
+
+    }
+    #main_section > div {
+        width: 100%;
+    }
+    #main_section > div > img {
+        width: 100%;
+        height: auto; /* 비율 유지 */
+    }
+
     /* 메인 섹션 모바일 패딩 */
     #main_section .information {
         padding: 30px 16px;
     }
 
+
+
     /* 장바구니 버튼 크기 축소 */
+    #main_section .accordion > .head,
     #main_section .information .cart > button {
-        padding: 16px 20px;
-        font-size: 15px;
+        padding: 16px 30px;
+        /*font-size: 15px;*/
     }
 
-    /* 디테일 이미지 2단 -> 1단(전체화면)으로 길게 */
+    /* 디테일 이미지 2단 -> 1단(전체화면)으로 길게 -> 모바일 캐러셀로 변경 */
     #detail_section .image_container {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        grid-template-columns: none;
+        gap: 0;
+        padding-right: 0;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
-    #detail_section .detail_info > div {
-        padding: 16px 0;
+    #detail_section .image_container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    #detail_section .image_container img {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    #detail_section .carousel_status {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    #detail_section .carousel_status .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ccc;
+        transition: background-color 0.3s;
+    }
+    #detail_section .carousel_status .dot.active {
+        background-color: #000;
+    }
+
+    #review .rating {
+        flex-direction: column;
+        gap: 30px;
     }
 
     /* 리뷰 필터 및 정렬 부분 세로 배치 */
+    #review button{
+        width: 100%;
+        margin: 20px 0;
+    }
     #review .filter > div {
-        flex-direction: column;
+        /*flex-direction: column;*/
         align-items: flex-start;
         gap: 15px;
     }
@@ -900,7 +1041,8 @@ h3{
 
     /* 포토/동영상 리뷰 2열로 축소 */
     #review .photo_video > ul {
-        grid-template-columns: repeat(2, 1fr);
+
+        /*grid-template-columns: repeat(2, 1fr);*/
     }
 
     /* 고객 리뷰 첨부 이미지 썸네일 축소 */
@@ -908,22 +1050,36 @@ h3{
         width: 80px;
         height: 80px;
     }
-}
 
-/*==========================================
-반응형
- ====================================*/
-/*태블릿 이하일 때 적용하게따*/
-@media screen and (max-width: 1024px) {
+/******************************
+체크포인트, 모델컷*************/
+    /* 1. 체크포인트 카드 & 모델컷 이미지 가로 슬라이드 설정 */
+    /* 1. 카드를 감싸는 부모 상자에만 가로 스크롤 적용 */
+    .swipe_wrapper {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 15px; /* 카드 사이 간격 */
+        cursor: grab;
+        padding-bottom: 10px; /* 스크롤 여유 공간 */
 
-}
+        /* 보기 싫은 스크롤바 숨기기 */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .swipe_wrapper::-webkit-scrollbar {
+        display: none;
+    }
 
-/*작은 태블릿일 때 적용~*/
-@media screen and (max-width: 768px) {
+    /* 2. 내부 카드들이 찌그러지지 않고 정상적으로 보이도록 복구 */
+    .swipe_wrapper .card {
+        display: block !important; /* ★ 이전 오류로 망가진 카드 내부 레이아웃 원상복구 */
+        width: 85%; /* 화면에 카드가 85% 정도 꽉 차게 보이도록 설정 */
+        flex-shrink: 0; /* 카드가 찌그러지는 현상 방지 */
+        margin-right: 0; /* 데스크탑에서 주었던 마진 제거 */
+    }
 
-}
-
-/*모바일일 때 적용하게똬*/
-@media screen and (max-width: 480px) {
-
+    /* 3. 모바일 스와이프 시 뚝뚝 끊기며 이미지 다운로드되는 현상 방지 */
+    .swipe_wrapper img {
+        pointer-events: none;
+    }
 }

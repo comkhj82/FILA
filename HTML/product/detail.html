@@ -2,6 +2,9 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>product_detail</title>
 
     <link rel="stylesheet" href="../../CSS/public.css">
@@ -87,6 +90,12 @@
                     <img src="../../IMAGE/product/product2.jpg" height="1800" width="1800"/>
                     <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
                     <img src="../../IMAGE/product/product4.jpg" height="1500" width="1500"/>
+                </div>
+                <div class="carousel_status">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
                 <div class="arrow_button"></div>
             </div>
@@ -229,7 +238,7 @@
         <section id="checkpoint_section">
             <section id="checkpoint">
                 <h2>체크포인트</h2>
-                <div>
+                <div class="swipe_wrapper">
                     <div class="card">
                         <div class="image_container">
                             <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
@@ -260,14 +269,17 @@
                     (여) 165cm / 착용 사이즈: S <br><br>
                     *모델 착용 이미지보다 제품컷 이미지의 컬러가 정확합니다.
                 </p>
-                <div class="image_container card">
-                    <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
-                </div>
-                <div class="image_container card">
-                    <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
-                </div>
-                <div class="image_container card">
-                    <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                <div class="swipe_wrapper">
+                    <div class="image_container card">
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                    </div>
+                    <div class="image_container card">
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                    </div>
+                    <div class="image_container card">
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                    </div>
+
                 </div>
 
             </section>
@@ -476,11 +488,23 @@
                             </div>
                             <p class="content">
                                 인텐시브 잘 사용하다 날이 더워져 기본수딩크림 <br>
-                                사보았습니다. 촉촉 수분감은 느껴지는데 제로이드 특성상 마무리는 뽀송?한 느낌입니다. <br>
+                                사보았습니다. 촉촉 수분감은 느껴지는데 제로이드 특성상 마무리는 뽀송?한 느낌입니다.
                                 그래서 볼 쪽은 덧 발라주고있어요! 건성이신분들은 산뜻한 마무리때문에 건조하다고 느낄수도 있을 것 같아요 <br>
                                 복합성피부는 좋습니다
-
                             </p>
+
+                            <div class="images">
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                </button>
+                            </div>
+
                             <div class="support">
                                 <button type="button">신고하기</button>
                                 <button type="button">
@@ -488,17 +512,6 @@
                                     <span>0</span>
                                 </button>
                             </div>
-                        </div>
-                        <div class="images">
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product.jpg" height="421" width="352"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
-                            </button>
                         </div>
                         <div class="date_container">
                             <span>작성일: 25.05.27</span>
@@ -539,6 +552,18 @@
                                 복합성피부는 좋습니다
 
                             </p>
+                            <div class="images">
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                </button>
+                            </div>
+
                             <div class="support">
                                 <button type="button">신고하기</button>
                                 <button type="button">
@@ -547,23 +572,12 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="images">
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product.jpg" height="421" width="352"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
-                            </button>
-                        </div>
                         <div class="date_container">
                             <span>작성일: 25.05.27</span>
                         </div>
-
-
                     </li>
+
+
                 </ul>
                 <hr>
                 <ul>
@@ -591,12 +605,24 @@
                                 <span>옵션3</span>
                             </div>
                             <p class="content">
-                                #광고 🐩 톤다운 브라운에 그린 컬러 조합 너무 귀여운 MY FAVORITE 강쥐 그래픽 티셔츠🐶🐾 봄 여름에 편하게 포인트 주기 딱❕❕
-                                <br>
-
-                                #FILA #휠라 #휠라마이티 #마이티셔츠
+                                인텐시브 잘 사용하다 날이 더워져 기본수딩크림 <br>
+                                사보았습니다. 촉촉 수분감은 느껴지는데 제로이드 특성상 마무리는 뽀송?한 느낌입니다. <br>
+                                그래서 볼 쪽은 덧 발라주고있어요! 건성이신분들은 산뜻한 마무리때문에 건조하다고 느낄수도 있을 것 같아요 <br>
+                                복합성피부는 좋습니다
 
                             </p>
+                            <div class="images">
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                </button>
+                                <button type="button" class="image_button">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                </button>
+                            </div>
+
                             <div class="support">
                                 <button type="button">신고하기</button>
                                 <button type="button">
@@ -605,23 +631,12 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="images">
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product.jpg" height="421" width="352"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
-                            </button>
-                            <button type="button" class="image_button">
-                                <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
-                            </button>
-                        </div>
                         <div class="date_container">
                             <span>작성일: 25.05.27</span>
                         </div>
-
-
                     </li>
+
+
                 </ul>
             </section>
 

@@ -220,52 +220,39 @@ document.addEventListener("DOMContentLoaded", () => {
 ////////////////////////////////////////////////////////////
 ////////////////슬라이드 이미지
 document.addEventListener("DOMContentLoaded", () => {
-    // 회원님이 지정하신 정확한 클래스명을 사용합니다.
     const slideWrapper = document.querySelector('.slide_wrapper');
     const slideContainer = document.querySelector('.slide_container');
 
     if (!slideWrapper || !slideContainer) return;
 
-    // 1. 끊김 없는 무한 흐름을 만들기 위해 내부 이미지들을 똑같이 1세트 복제해서 이어 붙입니다.
+    // 1. 끊김 없는 무한 흐름을 위해 내부 아이템 복제하여 이어 붙이기
     const originalItems = Array.from(slideContainer.children);
     originalItems.forEach(item => {
         const clone = item.cloneNode(true);
         slideContainer.appendChild(clone);
     });
 
-    // 2. 흘러가는 애니메이션을 위한 변수 설정
+    // 2. 슬라이드 위치 및 속도 설정
     let currentPos = 0;
-    let animationId;
-    const speed = 1.2; // 슬라이드 속도 (숫자를 키우면 더 빨리 지나갑니다)
+    const speed = 1.2; // 흘러가는 속도 (더 빠르게 하려면 숫자를 키우세요)
 
-    // 3. 계속해서 이동시키는 핵심 함수
+    // 3. 마우스 호버와 상관없이 영원히 돌아가는 무한 슬라이드 함수
     function slideContinuously() {
         currentPos -= speed;
 
-        // 컨테이너가 복제본을 포함한 전체 길이의 절반(즉, 원본 아이템 세트의 끝)만큼 이동했을 때
-        // 위치를 감쪽같이 0으로 되돌려서 무한 루프를 만듭니다.
+        // 원본 아이템 세트가 완전히 지나가면 감쪽같이 0으로 되돌려 무한 루프 구현
         if (Math.abs(currentPos) >= slideContainer.scrollWidth / 2) {
             currentPos = 0;
         }
 
-        // 요소 순서를 뒤섞지 않고 transform으로 부드럽게 위치만 밀어냅니다.
         slideContainer.style.transform = `translateX(${currentPos}px)`;
 
-        // 브라우저 주사율에 맞춰 끊김 없이 함수를 무한 반복 실행합니다.
-        animationId = requestAnimationFrame(slideContinuously);
+        // 일시정지 조건 없이 브라우저 프레임에 맞춰 무조건 계속 실행
+        requestAnimationFrame(slideContinuously);
     }
 
-    // 초기 애니메이션 실행
+    // 애니메이션 실행
     slideContinuously();
-
-    // 4. (선택) 마우스 올리면 멈추고 팝업 누를 수 있게 하기
-    slideWrapper.addEventListener('mouseenter', () => {
-        cancelAnimationFrame(animationId);
-    });
-
-    slideWrapper.addEventListener('mouseleave', () => {
-        animationId = requestAnimationFrame(slideContinuously);
-    });
 });
 
     //////////////////////////////////////////////////////

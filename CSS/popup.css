@@ -116,16 +116,16 @@ body > div{
 }
 .modal .form_section .product_item b{
     grid-area: title;
-    font-size: var(--font-body-lg-size);
+    font-size: var(--font-size-body-lg);
 }
 .modal .form_section .product_item span{
     grid-area: color;
-    font-size: var(--font-label-sm-size);
+    font-size: var(--font-size-body-md);
     color: var(--color-secondary);
 }
 .modal .form_section .product_item strong{
     grid-area: price;
-    font-size: var(--font-headline-md-size);
+    font-size: var(--font-size-body-lg);
 }
 
 .modal .form_section .product_size{
@@ -222,6 +222,13 @@ body > div{
     .modal .form_section .submit_container{
         /*position: relative;*/
     }
+    .modal .form_section .product_item b,
+    .modal .form_section .product_item strong{
+        font-size: 16px;
+    }
+    .modal .form_section .product_item span{
+        font-size: 14px;
+    }
 }
 
 /* 3. 모바일 (480px 이하)
@@ -259,10 +266,8 @@ body > div{
     }
 
     /* 폰트 크기 축소 */
-    .modal .form_section .product_item b {
-        font-size: 14px;
-    }
 
+    .modal .form_section .product_item b,
     .modal .form_section .product_item strong {
         font-size: 16px;
     }
@@ -270,7 +275,7 @@ body > div{
     /* 각 컨테이너 여백 및 폰트 미세 조정 */
     .modal .form_section .select_all_container {
         padding: 16px var(--modal-form-padding);
-        font-size: 15px;
+        /*font-size: 15px;*/
     }
 
     .modal .total_price_container {
@@ -296,7 +301,7 @@ body > div{
 
     /* 모바일 높이에 맞춘 스크롤 컨테이너 비율 조정 */
     .modal .form_section .product_container {
-        height: calc(100% - 130px);
+        height: calc(100% - 180px);
     }
 }
 

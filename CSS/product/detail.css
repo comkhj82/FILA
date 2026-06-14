@@ -526,14 +526,14 @@ h3{
 #review .rating > .total_rating{
     flex: 1;
     width: 100%;
-    /*max-width: 500px;*/
+    /* max-width: 500px; */
     font-size: 18px;
 }
 #review .rating > .total_rating > div{
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 80%;
+    /* width: 80%; */
     margin-bottom: 8px;
 }
 #review .rating > div:first-child{
@@ -801,6 +801,7 @@ h3{
     cursor: pointer;
     color: #767676;
     margin-right: 16px;
+    
 }
 
 #review .image_button {
@@ -942,7 +943,7 @@ h3{
 /* 3. 모바일 (480px 이하)
    - 폰트 크기, 패딩, 그리드를 모바일 환경에 꽉 차게 최적화합니다.
 */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     /* 전체 폰트 크기 축소 */
     h1 { font-size: 28px; }
     h2 { font-size: 24px; }
@@ -1016,13 +1017,38 @@ h3{
         background-color: #000;
     }
 
+    #checkpoint .card,
+    #model_cut .card {
+        width: 85%; /* 가로로 3개가 적절히 들어가도록 비율 조정 */
+        margin-right: 2%;
+    }
+
+/***************************************************************/
     #review .rating {
         flex-direction: column;
         gap: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* total_rating 영역 전체 너비 100% 확보 */
+    #review .rating > .total_rating {
+        width: 80%;
+        box-sizing: border-box;
+    }
+    #review .rating .stars{
+        display: flex;
+        /* justify-content: center; */
+    }
+    #review .rating .total_rating > div {
+        width: 100%;
+        /* justify-content: space-between; */
+    }
+    #review .rating .stars i:not(:first-child){
+        display: none;
     }
 
     /* 리뷰 필터 및 정렬 부분 세로 배치 */
-    #review button{
+    #review > button{
         width: 100%;
         margin: 20px 0;
     }
@@ -1039,18 +1065,77 @@ h3{
         flex: 1;
     }
 
-    /* 포토/동영상 리뷰 2열로 축소 */
-    #review .photo_video > ul {
 
-        /*grid-template-columns: repeat(2, 1fr);*/
-    }
 
     /* 고객 리뷰 첨부 이미지 썸네일 축소 */
-    #review .images img {
-        width: 80px;
-        height: 80px;
+    #review .reviews,
+    #review .reviews .item,
+    #review .reviews .item .contents {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
+    /* 고객 리뷰 첨부 이미지 썸네일 축소 및 가로 스크롤 제한 */
+    #review .reviews .images {
+        display: flex !important;
+        flex-direction: row !important; /* 무조건 가로 나열 */
+        width: 100% !important;         /* 상위 부모 크기에 맞춤 */
+        max-width: 100% !important;     /* 화면 너비를 절대 넘지 못함 */
+        overflow-x: auto !important;    /* ★ 넘치는 200px 이미지들은 이 안에서만 스크롤 */
+        overflow-y: hidden !important;   /* 세로 스크롤 방지 */
+        gap: 8px;
+        padding-bottom: 8px;            /* 스크롤 시 이미지가 잘리지 않도록 여백 */
+        margin-top: 15px;
+        box-sizing: border-box;
+        
+        /* 브라우저 기본 스크롤바 숨기기 (모바일 터치 스와이프는 정상 작동) */
+        -ms-overflow-style: none; 
+        scrollbar-width: none;    
+    }
+    #review .reviews .images::-webkit-scrollbar {
+        display: none;            
+    }
+
+    /* 이미지 버튼: 요청하신 200px 고정 및 압착 방지 */
+    #review .image_button {
+        width: 200px !important;
+        height: 200px !important;
+        flex-shrink: 0 !important;     /* ★ 중요: flex 안에서 절대 찌그러지지 않음 */
+        border-radius: 10px;
+        border: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 이미지 자체 스타일 정렬 */
+    #review .images img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;          /* 드래그 및 터치 시 이미지 스티커 현상 방지 */
+    }
+
+    #review .support {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #review .photo_video > .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0 0 0;
+        /* gap: 10px; */
+    }
+    
+    .photo_video > .header > button {
+        margin: 20px 0 10px 0;
+        justify-content: flex-start;
+        
+    }
 /******************************
 체크포인트, 모델컷*************/
     /* 1. 체크포인트 카드 & 모델컷 이미지 가로 슬라이드 설정 */

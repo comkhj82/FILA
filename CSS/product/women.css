@@ -1,7 +1,13 @@
-body{
-    margin: 48px 50px;
+body {
+    margin: 0;
+    padding: 0;
 }
-
+.container {
+    padding: 48px 50px; /* 기존 body에 주려던 여백을 container의 안쪽 여백으로 변경 */
+    width: 100%;
+    box-sizing: border-box; /* ★핵심: 패딩을 줘도 너비 100%를 초과하지 않게 방어해 줍니다. */
+    overflow-x: hidden; /* 혹시 모를 가로 스크롤 완벽 차단 */
+}
 /* 페이지 타이틀 및 필터 */
 .page_title_area {
     margin-top: 80px;
@@ -150,9 +156,14 @@ body{
     width: 100%; /* 너비 확보 */
 }
 
-.product_card .quick .options p{
+.product_card .quick .options button{
     margin: 4px 8px; /* 마진 축소 */
     cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .product_card .img_box img {
@@ -294,8 +305,18 @@ body{
 
 /* 1. 태블릿 이하 (1024px 이하) */
 @media (max-width: 1024px) {
+    /*body {*/
+    /*    margin: 40px 30px; !* 상하 40px, 좌우 30px로 여백 축소 *!*/
+    /*}*/
     body {
-        margin: 40px 30px; /* 상하 40px, 좌우 30px로 여백 축소 */
+        margin-top: 40px;
+        padding: 0;
+    }
+    .container {
+        padding: 40px 30px; /* 기존 body에 주려던 여백을 container의 안쪽 여백으로 변경 */
+        width: 100%;
+        box-sizing: border-box; /* ★핵심: 패딩을 줘도 너비 100%를 초과하지 않게 방어해 줍니다. */
+        overflow-x: hidden; /* 혹시 모를 가로 스크롤 완벽 차단 */
     }
 
     .page_title_area {
@@ -315,8 +336,16 @@ body{
 /* 2. 작은 태블릿 이하 (768px 이하)*/
 @media (max-width: 768px) {
     body {
-        margin: 30px 20px; /* 좌우 여백을 20px로 축소 */
+        margin-top: 30px;
+        padding: 0;
     }
+    .container {
+        padding: 30px 20px; /* 기존 body에 주려던 여백을 container의 안쪽 여백으로 변경 */
+        width: 100%;
+        box-sizing: border-box; /* ★핵심: 패딩을 줘도 너비 100%를 초과하지 않게 방어해 줍니다. */
+        overflow-x: hidden; /* 혹시 모를 가로 스크롤 완벽 차단 */
+    }
+
 
     .page_title {
         font-size: 32px; /* 타이틀 크기 축소 */
@@ -351,7 +380,7 @@ body{
         font-size: 14px;
         margin: 8px 10px;
     }
-    .product_card .quick .options p {
+    .product_card .quick .options button {
         margin: 4px 6px;
         font-size: 12px;
     }
@@ -367,8 +396,11 @@ body{
     h2 { font-size: 24px; }
     h3 { font-size: 20px; }
 
-    body {
-        margin: 20px 15px;
+    /*body {*/
+    /*    margin: 20px 15px;*/
+    /*}*/
+    .container {
+        padding: 20px 16px; /* 모바일에서는 여백을 줄여서 상품이 더 잘 보이게 조정 */
     }
 
     .page_title {
@@ -443,7 +475,7 @@ body{
         font-size: 12px;
         margin: 4px 0;
     }
-    .product_card .quick .options p {
+    .product_card .quick .options button {
         margin: 2px 4px;
         font-size: 11px;
     }

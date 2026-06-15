@@ -2,18 +2,30 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <title>Women | FILA 공식 온라인 스토어</title>
+    <meta name="description" content="FILA 여성 컬렉션. 트렌디한 여성 의류, 신발, 스포츠웨어 및 액세서리를 FILA 공식 온라인 스토어에서 확인하세요.">
+    <meta name="keywords" content="휠라 여성, FILA Women, 여성 스포츠웨어, 여성 운동화, 여성 반팔티">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Women | FILA 공식 온라인 스토어">
+    <meta property="og:description" content="FILA 여성 전용 컬렉션. 스타일과 퍼포먼스를 겸비한 최신 상품을 만나보세요.">
+    <meta property="og:image" content="../../IMAGE/LOGO/LOGO.png">
+
+    <link rel="canonical" href="https://www.fila.co.kr/product/women.html">
+    
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+
     <link rel="stylesheet" href="../../CSS/public.css">
+    <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/product/women.css">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
-
-
-    <title>Women</title>
+    <script src="../../JS/header.js" defer></script>
+    <script src="../../JS/common.js" defer></script>
     <script src="../../JS/women.js" defer></script>
-<!--    <script src="../../JS/common.js" defer></script>-->
 
 </head>
 <body>
@@ -21,684 +33,724 @@
     <div id="header-container"></div>
 
 
-    <main class="container">
-        <section class="page_title_area">
-            <h1 class="page_title">WOMEN
-                <span class="item_count">1363</span>
+    <main class="container" id="main-content">
+        <section class="page_title_area" aria-labelledby="page-title">
+            <h1 class="page_title" id="page-title">WOMEN
+                <span class="item_count" aria-label="총 1363개 상품">1363</span>
             </h1>
-            <div class="filter_tags">
-                <button class="tag">의류</button>
-                <button class="tag">신발</button>
-                <button class="tag">용품</button>
-                <button class="tag">언더웨어</button>
-                <button class="tag">스포츠</button>
-            </div>
+            <nav class="filter_tags" aria-label="카테고리 필터">
+                <button class="tag" aria-pressed="false">의류</button>
+                <button class="tag" aria-pressed="false">신발</button>
+                <button class="tag" aria-pressed="false">용품</button>
+                <button class="tag" aria-pressed="false">언더웨어</button>
+                <button class="tag" aria-pressed="false">스포츠</button>
+            </nav>
             <div class="filter_options">
-                <button class="btn_filter"><i class="fa-solid fa-arrow-down-short-wide"></i>  필터보기</button>
-                <button class="btn_filter">신상품순  <i class="fa-solid fa-angle-down"></i></button>
+                <button class="btn_filter"><i class="fa-solid fa-arrow-down-short-wide" aria-hidden="true"></i>  필터보기</button>
+                <button class="btn_filter">신상품순  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
             </div>
         </section>
 
-        <section class="product_grid">
+        <section class="product_grid" aria-label="여성 상품 목록">
 
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
             <div class="product_card">
                 <div class="img_box">
-                    <a href="#">
+                    <a href="detail.html" aria-label="휠라 글리오 핑크 상세페이지로 이동">
                         <img src="../../IMAGE/product/product_shoe1.jpg" height="1800"
-                             width="1800" class="before_hover"/>
-                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover"/>
+                             width="1800" class="before_hover" alt="휠라 글리오 핑크 정면 이미지"/>
+                        <img src="../../IMAGE/product/product_second.jpg" height="3510" width="2340" class="after_hover" alt="휠라 글리오 핑크 착용 이미지"/>
 
                         <div class="quick">
-                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping"></i></span>
+                            <span class="quick_add">QUICK ADD <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
                             <span class="options">
-                                <p>220</p>
-                                <p>225</p>
-                                <p>230</p>
-                                <p>235</p>
-                                <p>240</p>
-                                <p>245</p>
-                                <p>250</p>
-                                <p>255</p>
-                                <p>260</p>
+                                <button type="button" aria-label="사이즈 220 선택">220</button>
+                                <button type="button" aria-label="사이즈 225 선택">225</button>
+                                <button type="button" aria-label="사이즈 230 선택">230</button>
+                                <button type="button" aria-label="사이즈 235 선택">235</button>
+                                <button type="button" aria-label="사이즈 240 선택">240</button>
+                                <button type="button" aria-label="사이즈 245 선택">245</button>
+                                <button type="button" aria-label="사이즈 250 선택">250</button>
+                                <button type="button" aria-label="사이즈 255 선택">255</button>
+                                <button type="button" aria-label="사이즈 260 선택">260</button>
                             </span>
                         </div>
                     </a>
                 </div>
-                <div class="product_options">
-                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500"/>
-                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500"/>
+                <div class="product_options" role="group" aria-label="색상 옵션">
+                    <img src="../../IMAGE/product/product_shoe2.jpg" height="2000" width="1500" alt="색상 옵션 1"/>
+                    <img src="../../IMAGE/product/product_shoe3.jpg" height="2000" width="1500" alt="색상 옵션 2"/>
                 </div>
                 <div class="info_box">
-                    <p class="brand">공용</p>
-                    <h3 class="title">휠라 글리오 핑크</h3>
-                    <p class="price">109,000원</p>
+                    <a href="detail.html" style="text-decoration: none; color: inherit;">
+                        <p class="brand">공용</p>
+                        <h3 class="title">휠라 글리오 핑크</h3>
+                        <p class="price">109,000원</p>
+                    </a>
                 </div>
             </div>
 
@@ -711,25 +763,17 @@
 
         </section>
 
-        <nav class="pagination">
+        <nav class="pagination" aria-label="페이지 선택">
             <ul class="num">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
+                <li class="active"><a href="#" aria-current="page" aria-label="1페이지">1</a></li>
+                <li><a href="#" aria-label="2페이지">2</a></li>
+                <li><a href="#" aria-label="3페이지">3</a></li>
+                <li><a href="#" aria-label="4페이지">4</a></li>
+                <li><a href="#" aria-label="5페이지">5</a></li>
             </ul>
-            <span class="arrow">
-                <i class="fa-solid fa-angle-right"></i>
+            <span class="arrow" role="button" aria-label="다음 페이지">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
             </span>
-<!--            <span class="num">1</span>-->
-<!--            <span class="num">2</span>-->
-<!--            <span class="num">3</span>-->
-<!--            <span class="num">4</span>-->
-<!--            <span class="num">5</span>-->
-<!--            <span class="arrow">-->
-<!--                <i class="fa-solid fa-angle-right"></i>-->
-<!--            </span>-->
         </nav>
     </main>
 

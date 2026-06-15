@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            const plusBtn = e.target.closest('.fa-plus');
+            const plusBtn = e.target.closest('button[aria-label="수량 증가"]');
             if(plusBtn) {
                 const section = plusBtn.closest('.product_section');
                 const span = section ? section.querySelector('.count_section span') : null;
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            const minusBtn = e.target.closest('.fa-minus');
+            const minusBtn = e.target.closest('button[aria-label="수량 감소"]');
             if(minusBtn) {
                 const section = minusBtn.closest('.product_section');
                 const span = section ? section.querySelector('.count_section span') : null;

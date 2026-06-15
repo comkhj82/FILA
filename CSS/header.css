@@ -3,25 +3,76 @@ body{
 }
 
 header{
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 30px;
+    top: 30px; /* 쿠폰 높이만큼 기본 오프셋 */
+    left: 0;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 14px;
+    z-index: 999;
+    transition: top 0.3s ease;
+}
 
+/* 쿠폰 컨테이너 스타일 */
+.coupon_info_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #0039b3;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon_info_container > button{
+    position: absolute;
+    right: 20px;
+    background: unset;
+    border: unset;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* 쿠폰이 닫혔을 때의 상태 */
+body.coupon-closed .coupon_info_container {
+    display: none;
+}
+
+body.coupon-closed header {
+    top: 0;
+}
+
+/* 전체 페이지 레이아웃 조정 (헤더에 가려지지 않게) */
+body {
+    padding-top: 100px; /* 헤더(70px) + 쿠폰(30px) */
+    transition: padding-top 0.3s ease;
+}
+
+body.coupon-closed {
+    padding-top: 70px; /* 헤더 높이만큼만 */
+}
 
 }
 
 header > a{
     position: absolute;
-    left: 48px;
+    left: 20px;
 }
 header > nav{
     position: absolute;
-    right: 48px;
+    right: 20px;
 }
 
 header > .home > img{
@@ -67,8 +118,13 @@ header > .main_menu > li > a{
 /********************************************/
 /*헤더 우측 아이콘*/
 
+header > nav{
+    /*position: relative;*/
+}
+
 header > nav > ul{
     display: flex;
+
     /*position: relative;*/
 
 
@@ -106,7 +162,7 @@ header .sub_menu_container{
     /*bottom: calc(-100% - 12px);*/
     /*bottom: -100px;*/
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
     transition: opacity 0.3s ease;
     z-index: 999;
 }
@@ -160,10 +216,43 @@ header .sub_menu > li > a{
 
 /*작은 태블릿일 때 적용~*/
 @media screen and (max-width: 768px) {
+    header > .main_menu {
+        display: none;
+    }
 
-}
 
 /*모바일일 때 적용하게똬*/
 @media screen and (max-width: 480px) {
+    header {
+        padding: 8px 14px; /* 헤더 자체 패딩 축소 */
+    }
+
+    /* 모바일에서의 전체 페이지 레이아웃 조정 */
+    body {
+        padding-top: 80px; /* 쿠폰(30px) + 헤더(약 50px) */
+    }
+
+    body.coupon-closed {
+        padding-top: 50px; /* 헤더 높이만큼만 */
+    }
+
+
+    .coupon_info_container span,
+    .coupon_info_container > button{
+        font-size: 14px;
+    }
+    header > .home{
+        width: 30px;
+        height: 30px;
+    }
+    header > .home > img{
+        width: 100%;
+    }
+    nav ul{
+        gap: 0;
+    }
+    nav a{
+        font-size: 16px;
+    }
 
 }

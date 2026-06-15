@@ -1,3 +1,6 @@
+
+
+
 h2{
     font-size: 42px;
     font-weight: 700;
@@ -35,105 +38,14 @@ h3{
 
 
 .coupon_info_container{
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    background-color: #0039b3;
-    color: white;
-    height: 1.875rem;
-    line-height: 1.875rem;
-    z-index: 100;
-
+    /* header.css로 통합됨 */
 }
 .coupon_info_container > button{
-    position: absolute;
-    right: 1.25rem;
-    background: unset;
-    border: unset;
-    color: white;
-    line-height: 1.875rem;
+    /* header.css로 통합됨 */
 }
 
 /*****************************/
-header{
-    position: absolute;
-    width: 100%;
-    top: 1.875rem;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.875rem 0.875rem;
-
-}
-
-header > a{
-    position: absolute;
-    left: 3rem;
-}
-header > nav{
-    position: absolute;
-    right: 3rem;
-}
-
-header > .home > img{
-    width: 2.5rem;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-
-}
-
-header > .main_menu{
-    display: flex;
-    /*position: absolute;*/
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem 0.5rem;
-    /*background-color: none;*/
-
-}
-
-header > .main_menu > li{
-    padding: 0.25rem 0.5rem;
-    cursor: pointer;
-}
-
-header > .main_menu > li > a{
-    text-decoration: none; /*언더라인 제거*/
-    color: black;
-    padding: 0.25rem;
-
-    &:hover{
-        border-bottom: 0.125rem solid #0039b3;
-        border-radius: 0.125rem;
-
-        color: #0039b3;
-        font-weight: 600;
-
-    }
-}
-
-/********************************************/
-/*헤더 우측 아이콘*/
-
-header > nav > ul{
-    display: flex;
-    position: relative;
-
-
-}
-header > nav > ul li{
-    padding: 0.25rem 0.5rem;
-    cursor: pointer;
-
-}
-header > nav > ul li a{
-    color: #222;
-    font-size: 1.5rem;
-    padding-left: 0.625rem;
-}
+/* header 관련 중복 스타일 제거 (header.css로 통합됨) */
 /**********************/
 /*케러셀*/
 
@@ -1021,7 +933,15 @@ footer .sns_nav a{
         text-align: left;
     }
 
+    /* 헤더 높이가 얇아진 만큼 메인 컨텐츠를 위로 끌어올려 딱 붙입니다 */
+    main {
 
+        margin-top: 0 !important;
+    }
+
+    .carousel_container {
+        margin-top: 0 !important;
+    }
 
 
 

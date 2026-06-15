@@ -103,6 +103,10 @@ form > div{
     width: 120px;
     margin-bottom: 10px;
 }
+.product_info .count_section button{
+   border: none;
+    background-color: unset;
+}
 .product_info .count_section i{
     cursor: pointer;
 }

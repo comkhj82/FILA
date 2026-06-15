@@ -74,7 +74,12 @@ h3{
     justify-content: center;
     cursor: pointer;
     background-color: white;
+    transition: background-color 0.2s, color 0.2s;
+}
 
+.accordion .body .size.active {
+    background-color: black;
+    color: white;
 }
 
 /*************************************************/
@@ -652,13 +657,17 @@ h3{
     border: none;
     background-color: unset;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     color: #767676;
     padding-right: 8px;
+    transition: color 0.2s;
+}
+#review .filter > div > .sort_container button.active{
+    color: black;
 }
 #review .filter > div > .sort_container button:first-child{
-    color: #111;
+    /* color: #111; */ /* 초기값 설정을 JS나 HTML 클래스로 관리하도록 주석 처리 또는 제거 */
 }
 #review .filter > div > .search_container button{
     border: none;
@@ -668,6 +677,10 @@ h3{
     cursor: pointer;
     color: #767676;
     margin-right: 10px;
+    transition: color 0.2s;
+}
+#review .filter > div > .search_container button.active{
+    color: black;
 }
 #review .filter .search{
     background-color: #e6e6e6;
@@ -677,6 +690,19 @@ h3{
 #review .filter .search > input{
     border: none;
     background-color: unset;
+}
+
+/* 검색창 기본 취소 버튼 커스텀 */
+#review .filter .search > input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 #review .filter > div:nth-child(2){
@@ -948,6 +974,37 @@ h3{
     h1 { font-size: 28px; }
     h2 { font-size: 24px; }
     h3 { font-size: 20px; }
+    .accordion > .head span,
+    .accordion > .body,
+    .accordion .body .size,
+    #main_section .information .cart > button b,
+    #main_section .information .cart > button strong,
+    #detail_section .detail_info .accordion > .head,
+    #detail_section > .detail_info .accordion > .body,
+    #review .rating > div > span,
+    #review .total_rating .title,
+    #review .total_rating .count,
+    #review .photo_video > .header > button,
+    #review .filter > div > .sort_container button,
+    #review .filter > div > .search_container button,
+    #review .filter .dropdown button,
+    #review .reviews .item .contents .content,
+    #review .reviews .item .contents .options span{
+        font-size: 14px;
+    }
+    #checkpoint .card p,
+    #model_cut > p,
+    #review .reviews .item .contents .user_name{
+        font-size: 16px;
+    }
+    #review .reviews .item .contents .support button,
+    .reviews > ul .date_container > span{
+        font-size: 12px;
+    }
+
+
+
+
 
 
     #main_section{
@@ -964,10 +1021,23 @@ h3{
         height: auto; /* 비율 유지 */
     }
 
-    /* 메인 섹션 모바일 패딩 */
+    /************모바일 패딩 모음****************/
     #main_section .information {
-        padding: 30px 16px;
+        padding: 30px 24px;
     }
+    #detail_section .detail_info > div{
+        padding: 20px 4px;
+    }
+    #checkpoint_section{
+        padding: 20px 24px;
+    }
+    #review{
+        margin: 30px 24px;
+    }
+    .accordion > .body{
+        padding: 20px 30px;
+    }
+
 
 
 
@@ -1052,18 +1122,95 @@ h3{
         width: 100%;
         margin: 20px 0;
     }
+
+    #review .filter > div:first-child {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 15px;
+    }
+
+    #review .filter .search_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    #review .filter .search_container > button {
+        margin-right: 0 !important;
+        flex-shrink: 0;
+    }
+
+    .filter > div,
+    .sort_container {
+        display: flex !important;
+        flex-direction: row !important; /* 우선순위를 무시하고 무조건 가로로! */
+        flex-wrap: nowrap !important;   /* 화면이 좁아도 밑으로 떨어지지 않게! */
+        overflow-x: auto !important;    /* 화면 넘어가면 스크롤! */
+        width: 100%;
+        gap: 10px;
+        padding-bottom: 5px;
+
+        /* 스크롤바 숨김 */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
     #review .filter > div {
         /*flex-direction: column;*/
         align-items: flex-start;
-        gap: 15px;
+        gap: 0;
     }
     #review .filter .search {
-        width: 100%;
-        display: flex;
+        display: flex !important;
+        flex-direction: column; /* 돋보기 아래에 입력창이 오도록 세로 배치 */
+        align-items: flex-end;  /* 돋보기 아이콘을 우측으로 정렬 */
+        width: auto !important;
+        flex-grow: 1;
+        background-color: transparent;
     }
+
+    #review .filter .search button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        font-size: 18px;
+        color: #767676;
+    }
+
     #review .filter .search > input {
-        flex: 1;
+        display: none; /* 평소에는 숨김 */
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px 12px;
+        box-sizing: border-box;
     }
+    #review .filter .search > input.show {
+        display: block !important;
+        background-color: #e6e6e6;
+    }
+
+
+    .dropdown {
+        flex-shrink: 0 !important; /* ★ 핵심: 공간이 부족해도 드롭다운이 찌그러지지 않게 방어 */
+        display: block !important;
+        flex-direction: row !important;
+    }
+    .dropdown > button{
+        /*display: flex !important;*/
+        /*flex-direction: row !important;*/
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap !important; /* 글자 줄바꿈 방지 */
+        gap: 6px;
+    }
+    .dropdown > button::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
 
 
 
@@ -1125,17 +1272,22 @@ h3{
     }
 
     #review .photo_video > .header {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 10px 0 0 0;
+        /*flex-direction: column;*/
+
+        /*align-items: flex-start;*/
+        margin: 10px 0;
+        padding: 0;
+        align-items: center;
         /* gap: 10px; */
     }
     
     .photo_video > .header > button {
-        margin: 20px 0 10px 0;
+        margin: 0;
         justify-content: flex-start;
         
     }
+
+
 /******************************
 체크포인트, 모델컷*************/
     /* 1. 체크포인트 카드 & 모델컷 이미지 가로 슬라이드 설정 */
@@ -1166,5 +1318,26 @@ h3{
     /* 3. 모바일 스와이프 시 뚝뚝 끊기며 이미지 다운로드되는 현상 방지 */
     .swipe_wrapper img {
         pointer-events: none;
+    }
+
+    /* 핏 가이드 가로 슬라이드 */
+    #detail_section .detail_info .accordion .fit_container {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 10px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        /*max-width: 80%;*/
+    }
+    .fit_container > div{
+        max-width: 80%;
+    }
+    #detail_section .detail_info .accordion .fit_container::-webkit-scrollbar {
+        display: none;
+    }
+    #detail_section .detail_info .accordion .fit_container > div {
+        flex: 0 0 200px; /* 찌그러지지 않게 고정 너비 부여 */
+        margin-right: 0 !important;
     }
 }

@@ -2,14 +2,29 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <title>마이티셔츠 유니 세미오버핏 | FILA 공식 온라인 스토어</title>
+    <meta name="description" content="빈티지한 무드와 귀여운 강아지 그래픽의 조화. 마이티셔츠 유니 세미오버핏을 FILA 공식 온라인 스토어에서 만나보세요.">
+    <meta name="keywords" content="마이티셔츠, 휠라 티셔츠, 오버핏 티셔츠, 유니섹스 반팔, FILA 티셔츠">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="마이티셔츠 유니 세미오버핏 | FILA 공식 온라인 스토어">
+    <meta property="og:description" content="트렌디한 그래픽과 감각적인 컬러 조합, 오버핏으로 완성된 휠라 마이티셔츠.">
+    <meta property="og:image" content="../../IMAGE/product/product1.jpg">
+
+    <link rel="canonical" href="https://www.fila.co.kr/product/detail.html">
+
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>product_detail</title>
 
     <link rel="stylesheet" href="../../CSS/public.css">
+    <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/product/detail.css">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+    <script src="../../JS/header.js" defer></script>
+    <script src="../../JS/common.js" defer></script>
     <script src="../../JS/detail.js" defer></script>
 
 </head>
@@ -20,7 +35,7 @@
     <main>
         <section id="main_section">
             <div>
-                <img src="../../IMAGE/product/product1.jpg" height="1800" width="1800"/>
+                <img src="../../IMAGE/product/product1.jpg" height="1800" width="1800" alt="마이티셔츠 유니 세미오버핏 메인 이미지"/>
             </div>
 
             <div>
@@ -31,8 +46,8 @@
                             <span class="tag">의류</span>
                         </div>
 
-                        <button type="button" class="share">
-                            <i class="fa-solid fa-share-nodes"></i>
+                        <button type="button" class="share" aria-label="상품 공유하기">
+                            <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
                         </button>
                     </div>
 
@@ -40,12 +55,12 @@
                         <h1>마이티셔츠 유니 세미오버핏</h1>
                     </div>
 
-                    <div class="group">
+                    <div class="group" role="group" aria-label="색상 선택">
                         <ul>
-                            <li><a href="#"><img src="../../IMAGE/product/product1.jpg" height="1800"
-                                                                    width="1800"/></a></li>
-                            <li><a href="#"><img src="../../IMAGE/product/product1.jpg" height="1800"
-                                                                    width="1800"/></a></li>
+                            <li><a href="#" aria-label="색상 옵션 1"><img src="../../IMAGE/product/product1.jpg" height="1800"
+                                                                    width="1800" alt="색상 1 썸네일"/></a></li>
+                            <li><a href="#" aria-label="색상 옵션 2"><img src="../../IMAGE/product/product1.jpg" height="1800"
+                                                                    width="1800" alt="색상 2 썸네일"/></a></li>
                         </ul>
                     </div>
 
@@ -57,22 +72,22 @@
 <!--                    </div>-->
 
                     <div class="accordion">
-                        <div class="head">
+                        <div class="head" role="button" aria-expanded="false" aria-controls="size-body">
                             <span>사이즈 선택</span>
-                            <i class="fa-solid fa-caret-down icon_caret"></i>
-                            <i class="fa-solid fa-xmark icon_xmark"></i>
+                            <i class="fa-solid fa-caret-down icon_caret" aria-hidden="true"></i>
+                            <i class="fa-solid fa-xmark icon_xmark" aria-hidden="true"></i>
                         </div>
-                        <div class="body">
-                            <button type="button" class="size">XS(85)</button>
-                            <button type="button" class="size">S(90)</button>
-                            <button type="button" class="size">M(95)</button>
-                            <button type="button" class="size">L(100)</button>
-                            <button type="button" class="size">XL(105)</button>
+                        <div class="body" id="size-body">
+                            <button type="button" class="size" aria-label="XS(85) 사이즈 선택">XS(85)</button>
+                            <button type="button" class="size" aria-label="S(90) 사이즈 선택">S(90)</button>
+                            <button type="button" class="size" aria-label="M(95) 사이즈 선택">M(95)</button>
+                            <button type="button" class="size" aria-label="L(100) 사이즈 선택">L(100)</button>
+                            <button type="button" class="size" aria-label="XL(105) 사이즈 선택">XL(105)</button>
                         </div>
                     </div>
 
                     <div class="cart">
-                        <button type="button">
+                        <button type="button" aria-label="장바구니에 담기, 가격 49,900원">
                             <b>카트에 추가</b>
                             <strong>49,900원</strong>
                         </button>
@@ -85,17 +100,17 @@
 
         <section id="detail_section">
             <div>
-                <div class="image_container">
-                    <img src="../../IMAGE/product/product1.jpg" height="1800" width="1800"/>
-                    <img src="../../IMAGE/product/product2.jpg" height="1800" width="1800"/>
-                    <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
-                    <img src="../../IMAGE/product/product4.jpg" height="1500" width="1500"/>
+                <div class="image_container" aria-label="상품 상세 이미지 갤러리">
+                    <img src="../../IMAGE/product/product1.jpg" height="1800" width="1800" alt="상세 이미지 1"/>
+                    <img src="../../IMAGE/product/product2.jpg" height="1800" width="1800" alt="상세 이미지 2"/>
+                    <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500" alt="상세 이미지 3"/>
+                    <img src="../../IMAGE/product/product4.jpg" height="1500" width="1500" alt="상세 이미지 4"/>
                 </div>
-                <div class="carousel_status">
-                    <div class="dot active"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                <div class="carousel_status" role="tablist" aria-label="이미지 선택">
+                    <div class="dot active" role="tab" aria-selected="true" aria-label="1번 이미지 보기"></div>
+                    <div class="dot" role="tab" aria-selected="false" aria-label="2번 이미지 보기"></div>
+                    <div class="dot" role="tab" aria-selected="false" aria-label="3번 이미지 보기"></div>
+                    <div class="dot" role="tab" aria-selected="false" aria-label="4번 이미지 보기"></div>
                 </div>
                 <div class="arrow_button"></div>
             </div>
@@ -238,24 +253,24 @@
         <section id="checkpoint_section">
             <section id="checkpoint">
                 <h2>체크포인트</h2>
-                <div class="swipe_wrapper">
+                <div class="swipe_wrapper" aria-label="상품 주요 특징">
                     <div class="card">
                         <div class="image_container">
-                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
+                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500" alt="빈티지 무드 그래픽 상세 이미지"/>
                         </div>
                         <h3>빈티지 무드 그래픽</h3>
                         <p>“MY FAVORITE” 레터링과 귀여운 강아지 그래픽을 조합해 빈티지한 감성과 위트 있는 무드를 동시에 담아낸 디자인입니다.</p>
                     </div>
                     <div class="card">
                         <div class="image_container">
-                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
+                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500" alt="빈티지 무드 그래픽 상세 이미지 2"/>
                         </div>
                         <h3>빈티지 무드 그래픽</h3>
                         <p>“MY FAVORITE” 레터링과 귀여운 강아지 그래픽을 조합해 빈티지한 감성과 위트 있는 무드를 동시에 담아낸 디자인입니다.</p>
                     </div>
                     <div class="card">
                         <div class="image_container">
-                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500"/>
+                            <img src="../../IMAGE/product/product3.jpg" height="1500" width="1500" alt="빈티지 무드 그래픽 상세 이미지 3"/>
                         </div>
                         <h3>빈티지 무드 그래픽</h3>
                         <p>“MY FAVORITE” 레터링과 귀여운 강아지 그래픽을 조합해 빈티지한 감성과 위트 있는 무드를 동시에 담아낸 디자인입니다.</p>
@@ -269,15 +284,15 @@
                     (여) 165cm / 착용 사이즈: S <br><br>
                     *모델 착용 이미지보다 제품컷 이미지의 컬러가 정확합니다.
                 </p>
-                <div class="swipe_wrapper">
+                <div class="swipe_wrapper" aria-label="모델 착용 컷">
                     <div class="image_container card">
-                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800" alt="모델 착용 컷 1"/>
                     </div>
                     <div class="image_container card">
-                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800" alt="모델 착용 컷 2"/>
                     </div>
                     <div class="image_container card">
-                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800"/>
+                        <img src="../../IMAGE/product/model_cut.jpg" height="1067" width="800" alt="모델 착용 컷 3"/>
                     </div>
 
                 </div>
@@ -289,18 +304,18 @@
         <section id="review">
             <h2>REVIEW</h2>
             <button type="button">내 리뷰 작성하기</button>
-            <section class="rating">
+            <section class="rating" aria-label="평점 요약">
                 <div>
                     <h3>
-                        <span><i class="fa-solid fa-star"></i>3.5</span>
+                        <span aria-label="평점 3.5점"><i class="fa-solid fa-star" aria-hidden="true"></i>3.5</span>
                     </h3>
                     <span>100%가 <b>좋아요</b> 라고 평가했습니다.</span><br>
                     <span>리뷰 442개</span>
                 </div>
                 <div class="total_rating">
-                    <div>
+                    <div aria-label="별 5개 평점">
                         <span class="title">아주 좋아요</span>
-                        <div class="stars">
+                        <div class="stars" aria-hidden="true">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -309,49 +324,49 @@
                         </div>
                         <span class="count">400</span>
                     </div>
-                    <div>
-                        <span class="title">아주 좋아요</span>
-                        <div class="stars">
+                    <div aria-label="별 4개 평점">
+                        <span class="title">좋아요</span>
+                        <div class="stars" aria-hidden="true">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                        <span class="count">400</span>
+                        <span class="count">40</span>
                     </div>
-                    <div>
-                        <span class="title">아주 좋아요</span>
-                        <div class="stars">
+                    <div aria-label="별 3개 평점">
+                        <span class="title">보통이에요</span>
+                        <div class="stars" aria-hidden="true">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                        <span class="count">400</span>
+                        <span class="count">2</span>
                     </div>
-                    <div>
-                        <span class="title">아주 좋아요</span>
-                        <div class="stars">
+                    <div aria-label="별 2개 평점">
+                        <span class="title">그저 그래요</span>
+                        <div class="stars" aria-hidden="true">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                        <span class="count">400</span>
+                        <span class="count">0</span>
                     </div>
-                    <div>
-                        <span class="title">아주 좋아요</span>
-                        <div class="stars">
+                    <div aria-label="별 1개 평점">
+                        <span class="title">별로예요</span>
+                        <div class="stars" aria-hidden="true">
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
-                        <span class="count">400</span>
+                        <span class="count">0</span>
                     </div>
 
                 </div>
@@ -360,44 +375,44 @@
             <section class="photo_video">
                 <div class="header">
                     <h3>포토&동영상</h3>
-                    <button type="button">
+                    <button type="button" aria-label="포토 및 동영상 리뷰 전체보기">
                         <span>전체보기</span>
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
 
-                <ul>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                <ul aria-label="포토 및 동영상 리뷰 갤러리">
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 1"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 2"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 3"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 4"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 5"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 6"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 7"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
-                    <li class="button image_container" role="button">
-                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800"/>
-                        <i class="fa-brands fa-instagram"></i>
+                    <li class="button image_container" role="button" aria-label="리뷰 이미지 크게 보기">
+                        <img src="../../IMAGE/slide_2.jpg" height="1066" width="800" alt="사용자 업로드 리뷰 이미지 8"/>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </li>
 
                 </ul>
@@ -416,7 +431,9 @@
                         </button>
 
                         <label class="search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <button type="button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                             <input type="search">
                         </label>
                     </div>
@@ -472,12 +489,12 @@
                                 <span class="user_name">나는유저야</span>
                             </div>
                             <div class="meta">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                <div class="stars" aria-label="별 5개">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                                 </div>
                                 <span class="date"></span>
                             </div>
@@ -493,22 +510,22 @@
                                 복합성피부는 좋습니다
                             </p>
 
-                            <div class="images">
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                            <div class="images" aria-label="리뷰 첨부 이미지">
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 1 크게 보기">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352" alt="리뷰 상품 이미지 1"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 2 크게 보기">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800" alt="리뷰 상품 이미지 2"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 3 크게 보기">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165" alt="리뷰 상품 이미지 3"/>
                                 </button>
                             </div>
 
                             <div class="support">
                                 <button type="button">신고하기</button>
-                                <button type="button">
-                                    <i class="fa-regular fa-thumbs-up"></i>
+                                <button type="button" aria-label="도움돼요">
+                                    <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
                                     <span>0</span>
                                 </button>
                             </div>
@@ -531,12 +548,12 @@
                                 <span class="user_name">나는유저야</span>
                             </div>
                             <div class="meta">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                <div class="stars" aria-label="별 5개">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                                 </div>
                                 <span class="date"></span>
                             </div>
@@ -552,22 +569,22 @@
                                 복합성피부는 좋습니다
 
                             </p>
-                            <div class="images">
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                            <div class="images" aria-label="리뷰 첨부 이미지">
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 1 크게 보기">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352" alt="리뷰 상품 이미지 1"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 2 크게 보기">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800" alt="리뷰 상품 이미지 2"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 3 크게 보기">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165" alt="리뷰 상품 이미지 3"/>
                                 </button>
                             </div>
 
                             <div class="support">
                                 <button type="button">신고하기</button>
-                                <button type="button">
-                                    <i class="fa-regular fa-thumbs-up"></i>
+                                <button type="button" aria-label="도움돼요">
+                                    <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
                                     <span>0</span>
                                 </button>
                             </div>
@@ -590,12 +607,12 @@
                                 <span class="user_name">나는유저야</span>
                             </div>
                             <div class="meta">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                <div class="stars" aria-label="별 5개">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                                 </div>
                                 <span class="date"></span>
                             </div>
@@ -611,22 +628,22 @@
                                 복합성피부는 좋습니다
 
                             </p>
-                            <div class="images">
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product.jpg" height="421" width="352"/>
+                            <div class="images" aria-label="리뷰 첨부 이미지">
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 1 크게 보기">
+                                    <img src="../../IMAGE/product.jpg" height="421" width="352" alt="리뷰 상품 이미지 1"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 2 크게 보기">
+                                    <img src="../../IMAGE/product2.jpg" height="1200" width="800" alt="리뷰 상품 이미지 2"/>
                                 </button>
-                                <button type="button" class="image_button">
-                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165"/>
+                                <button type="button" class="image_button" aria-label="리뷰 이미지 3 크게 보기">
+                                    <img src="../../IMAGE/product_detail.jpg" height="165" width="165" alt="리뷰 상품 이미지 3"/>
                                 </button>
                             </div>
 
                             <div class="support">
                                 <button type="button">신고하기</button>
-                                <button type="button">
-                                    <i class="fa-regular fa-thumbs-up"></i>
+                                <button type="button" aria-label="도움돼요">
+                                    <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
                                     <span>0</span>
                                 </button>
                             </div>

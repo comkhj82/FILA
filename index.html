@@ -3,64 +3,75 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>FILA 공식 온라인 스토어</title>
+    <title>FILA 공식 온라인 스토어 | 115년 전통의 글로벌 헤리티지 브랜드</title>
+    <meta name="description" content="FILA 공식 온라인 스토어에서 115년 전통의 헤리티지를 담은 마이티셔츠, 에샤페, 테니스 컬렉션 등 최신 상품을 만나보세요.">
+    <meta name="keywords" content="휠라, FILA, 휠라 온라인스토어, 에샤페, 휠라 테니스, 휠라 신발, 휠라 의류">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fila.co.kr/">
+    <meta property="og:title" content="FILA 공식 온라인 스토어">
+    <meta property="og:description" content="115년 전통의 글로벌 헤리티지 브랜드 FILA의 최신 컬렉션과 익스클루시브 상품을 확인하세요.">
+    <meta property="og:image" content="IMAGE/LOGO/LOGO.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.fila.co.kr/">
+    <meta property="twitter:title" content="FILA 공식 온라인 스토어">
+    <meta property="twitter:description" content="115년 전통의 글로벌 헤리티지 브랜드 FILA의 최신 컬렉션과 익스클루시브 상품을 확인하세요.">
+    <meta property="twitter:image" content="IMAGE/LOGO/LOGO.png">
+
+    <link rel="canonical" href="https://www.fila.co.kr/">
+    
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/public.css">
+    <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/index.css">
-
     <link rel="stylesheet" href="CSS/popup.css">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
-<!--    <script src="JS/header.js" defer></script>-->
+    <script src="JS/header.js" defer></script>
+    <script src="JS/common.js" defer></script>
     <script src="JS/index.js" defer></script>
     <script src="JS/popup.js" defer></script>
 
 
 </head>
 <body>
-    <div class="coupon_info_container">
-        <span>
-            친구 추가 시 10% 할인쿠폰
-        </span>
-        <button type="button">
-            <i class="fa-solid fa-x"></i>
-        </button>
-    </div>
-
     <div id="header-container"></div>
 
-    <main>
-        <section class="carousel_container">
+    <main id="main-content">
+        <section class="carousel_container" aria-roledescription="carousel" aria-label="메인 배너">
             <div class="button_container">
-                <button type="button"><i class="fa-solid fa-angle-left"></i></button>
-                <button type="button"><i class="fa-solid fa-angle-right"></i></button>
+                <button type="button" aria-label="이전 슬라이드"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
+                <button type="button" aria-label="다음 슬라이드"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></button>
             </div>
 
             <ul class="carousel">
-                <li class="slide">
+                <li class="slide" role="group" aria-roledescription="slide" aria-label="1/3">
 <!--                    <div>-->
 <!--                        <h2>TITLE1</h2>-->
 <!--                        <p>이건 파이리와 꼬부기의 싸움이다</p>-->
 <!--                    </div>-->
-                    <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/40ed1433d6f740edae9171f7a3066c3a/40ed1433d6f740edae9171f7a3066c3a.HD-1080p-7.2Mbps-83835070.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"></video>
-                </li>
-                <li class="slide">
+                    <video class="desktop_banner" playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/40ed1433d6f740edae9171f7a3066c3a/40ed1433d6f740edae9171f7a3066c3a.HD-1080p-7.2Mbps-83835070.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/40ed1433d6f740edae9171f7a3066c3a.thumbnail.0000000000_1100x.jpg?v=1778488149" class="desktop_banner" alt="메인 비디오 배너"></video>
+                    <img src="IMAGE/beginning_1.png" height="3098" width="1780" class="mobile_banner" alt="모바일 메인 배너 1"/></li>
+                <li class="slide" role="group" aria-roledescription="slide" aria-label="2/3">
                     <div>
 <!--                        <h2>TITLE2</h2>-->
 <!--                        <p>리자드 진화</p>-->
                     </div>
-                    <video playsinline="true" autoplay="autoplay" loop="" muted="muted" class="media-video" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/2d2319ff42ad47578bfdc01800606d5f/2d2319ff42ad47578bfdc01800606d5f.HD-1080p-7.2Mbps-84613462.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668"></video>
-                </li>
-                <li class="slide">
+                    <video class="desktop_banner" playsinline="true" autoplay="autoplay" loop="" muted="muted" class="media-video" preload="metadata" poster="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668" ><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/2d2319ff42ad47578bfdc01800606d5f/2d2319ff42ad47578bfdc01800606d5f.HD-1080p-7.2Mbps-84613462.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/2d2319ff42ad47578bfdc01800606d5f.thumbnail.0000000000_small.jpg?v=1779352668" class="desktop_banner" alt="메인 비디오 배너 2"></video>
+                    <img src="IMAGE/banner_mobile2.png" height="2144" width="1500" class="mobile_banner" alt="모바일 메인 배너 2"/></li>
+                <li class="slide" role="group" aria-roledescription="slide" aria-label="3/3">
                     <div>
 <!--                        <h2>TITLE3</h2>-->
 <!--                        <p>리자몽 최종 진화</p>-->
                     </div>
 
 <!--                    <video playsinline="true" loop="" muted="muted" preload="none" class="media-video" poster="//www.fila.co.kr/cdn/shop/files/preview_images/b47fff7214de44db819510485c6c93ab.thumbnail.0000000000_small.jpg?v=1778044809"><source src="//www.fila.co.kr/cdn/shop/videos/c/vp/b47fff7214de44db819510485c6c93ab/b47fff7214de44db819510485c6c93ab.HD-1080p-7.2Mbps-83467571.mp4?v=0" type="video/mp4"><img src="//www.fila.co.kr/cdn/shop/files/preview_images/b47fff7214de44db819510485c6c93ab.thumbnail.0000000000_small.jpg?v=1778044809"></video>-->
-                    <img src="IMAGE/banner_1.png" height="2160" width="3840" class="desktop_banner"/>
-                    <img src="IMAGE/banner_mobile1.jpg" height="2999" width="2000" class="mobile_banner"/>
+                    <img src="IMAGE/banner_1.png" height="2160" width="3840" class="desktop_banner" alt="메인 이미지 배너"/>
+                    <img src="IMAGE/banner_mobile1.jpg" height="2999" width="2000" class="mobile_banner" alt="모바일 메인 이미지 배너"/>
                 </li>
 
             </ul>
@@ -74,30 +85,30 @@
         <section class="trending_now">
             <h2>Trending Now</h2>
             <div>
-                <ul>
-                    <li><button type="button" class="btn active">마이티셔츠</button></li>
-                    <li><button type="button" class="btn">글리오</button></li>
-                    <li><button type="button" class="btn">경량</button></li>
-                    <li><button type="button" class="btn">페이토</button></li>
-                    <li><button type="button" class="btn">에샤페</button></li>
-                    <li><button type="button" class="btn">하레핀</button></li>
-                    <li><button type="button" class="btn">테니스</button></li>
+                <ul role="tablist">
+                    <li><button type="button" class="btn active" role="tab" aria-selected="true">마이티셔츠</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">글리오</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">경량</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">페이토</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">에샤페</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">하레핀</button></li>
+                    <li><button type="button" class="btn" role="tab" aria-selected="false">테니스</button></li>
                 </ul>
 
                 <div class="arrow_button_container">
-                    <button type="button" class="arrow_button border rounded">
-                        <i class="fa-solid fa-arrow-left"></i>
+                    <button type="button" class="arrow_button border rounded" aria-label="이전 상품 보기">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="arrow_button border rounded">
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <button type="button" class="arrow_button border rounded" aria-label="다음 상품 보기">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
-            <ul class="active">
+            <ul class="active" role="tabpanel">
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
-                            <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img1">
+                            <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="마이티셔츠 유니 세미오버핏">
 
                         </div>
                         <span class="tag">공용</span>
@@ -106,7 +117,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img2">
                         </div>
@@ -116,7 +127,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img3">
                         </div>
@@ -126,7 +137,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img4">
                         </div>
@@ -136,7 +147,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img5">
                         </div>
@@ -146,7 +157,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img5">
                         </div>
@@ -156,7 +167,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img5">
                         </div>
@@ -166,7 +177,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="https://www.fila.co.kr/cdn/shop/files/01_4cc63cb4-aabb-460f-b2cf-25fa06d04fc3.jpg?v=1773734453&width=1946" width="400" alt="img5">
                         </div>
@@ -178,7 +189,7 @@
             </ul>
             <ul class="trending_image">
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -188,7 +199,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -198,7 +209,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -208,7 +219,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -218,7 +229,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -228,7 +239,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -238,7 +249,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product2.jpg" height="1200" width="800"/>
                         </div>
@@ -250,7 +261,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
@@ -262,7 +273,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
@@ -274,7 +285,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
@@ -286,7 +297,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
                         </div>
@@ -296,7 +307,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
                         </div>
@@ -306,7 +317,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
                         </div>
@@ -316,7 +327,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product.jpg" height="421" width="352"/>
                         </div>
@@ -328,7 +339,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -338,7 +349,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -348,7 +359,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -358,7 +369,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -368,7 +379,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -378,7 +389,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -388,7 +399,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/user.jpg" height="607" width="500"/>
                         </div>
@@ -400,7 +411,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
@@ -411,7 +422,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
@@ -422,7 +433,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
 
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
@@ -433,7 +444,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
                         </div>
@@ -443,7 +454,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
                         </div>
@@ -453,7 +464,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
                         </div>
@@ -463,7 +474,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/beginning_1.png" height="3098" width="1780"/>
                         </div>
@@ -475,7 +486,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -485,7 +496,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -495,7 +506,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -505,7 +516,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -515,7 +526,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -525,7 +536,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -535,7 +546,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/product_detail.jpg" height="165" width="165"/>
                         </div>
@@ -547,7 +558,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -557,7 +568,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -567,7 +578,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -577,7 +588,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -587,7 +598,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -597,7 +608,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -607,7 +618,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="HTML/product/detail.html">
                         <div class="image_container">
                             <img src="IMAGE/2-2.jpg" height="4096" width="3104"/>
                         </div>
@@ -630,8 +641,8 @@
         </section>
 
         <section class="image_section">
-            <img src="https://www.fila.co.kr/cdn/shop/files/SRC.png?v=1765766340&width=1200" width="700" alt="image1" />
-            <img src="https://www.fila.co.kr/cdn/shop/files/fl2132.jpg?v=1770956747&width=1200" width="700"alt="image2" />
+            <img src="https://www.fila.co.kr/cdn/shop/files/SRC.png?v=1765766340&width=1200" width="700" alt="휠라 헤리티지 이미지 1" />
+            <img src="https://www.fila.co.kr/cdn/shop/files/fl2132.jpg?v=1770956747&width=1200" width="700" alt="휠라 헤리티지 이미지 2" />
         </section>
 
         <section class = "edit_section">
@@ -641,18 +652,18 @@
 
                 <div class="image_container">
                     <div class="image_wrap main">
-                        <img class="main" src="IMAGE/1-1.jpg" height="3840" width="2160"/>
+                        <img class="main" src="IMAGE/1-1.jpg" height="3840" width="2160" alt="Fila Edit 메인 이미지"/>
 
                     </div>
                     <div class="image_wrap sub">
-                        <img class="sub" src="IMAGE/1-2.jpg" height="3328" width="2497"/>
+                        <img class="sub" src="IMAGE/1-2.jpg" height="3328" width="2497" alt="Fila Edit 서브 이미지"/>
 
                     </div>
 
                 </div>
 
                 <div class="edit_section_text">
-                    <div>
+                    <nav aria-label="Fila Edit 카테고리">
                         <a href="#">아일릿</a>
                         <a href="#">ARC</a>
                         <a href="#">쿨링반팔</a>
@@ -660,7 +671,7 @@
                         <a href="#">테니스</a>
                         <a href="#">Speed-Serve 2.0</a>
                         <a href="#">클럽매치</a>
-                    </div>
+                    </nav>
                 </div>
 
             </div>
@@ -676,7 +687,7 @@
                 1911 & Everyday
             </h2>
             <div>
-                <a href="#" style="background-image: url('IMAGE/beginning_1.png');">
+                <a href="#" style="background-image: url('IMAGE/beginning_1.png');" aria-label="Control The Court 테니스 제품 보기">
                     <div class="beginning_wrap">
                         <div class="beginning_information">
                             <h3>Control The Court</h3>
@@ -686,13 +697,13 @@
                                 휠라 테니스 제품을 만나보세요.
                             </p>
                         </div>
-                        <button type="button" class="arrow_button border rounded">
+                        <button type="button" class="arrow_button border rounded" aria-hidden="true">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
 
                     </div>
                 </a>
-                <a href="#" style="background-image: url('IMAGE/beginning_2.jpg');">
+                <a href="#" style="background-image: url('IMAGE/beginning_2.jpg');" aria-label="Control The Court 테니스 컬렉션 보기">
                     <div class="beginning_wrap">
                         <div class="beginning_information">
                             <h3>Control The Court</h3>
@@ -702,7 +713,7 @@
                                 휠라 테니스 제품을 만나보세요.
                             </p>
                         </div>
-                        <button type="button" class="arrow_button border rounded">
+                        <button type="button" class="arrow_button border rounded" aria-hidden="true">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
 
@@ -715,46 +726,46 @@
         </section>
         <section class="archive_section">
             <div class="archive_section_text">
-                <img class="logo" src="IMAGE/LOGO/LOGO.png" height="100" width="100"/>
+                <img class="logo" src="IMAGE/LOGO/LOGO.png" height="100" width="100" alt="FILA 아카이브 로고"/>
                 <p>FILA 아카이브를 기반으로 브랜드의 클래식한 정체정을 담아낸 헤리티지 컬렉션을 소개합니다.
                     <br><br>1911 & Everyday Since
                 </p>
-                <a href="#" class="arrow_button border rounded"><i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="arrow_button border rounded" aria-label="아카이브 더보기"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
             <div class="archive_section_image">
-                <img src="IMAGE/아카이브.jpg" /></div>
+                <img src="IMAGE/아카이브.jpg" alt="FILA 아카이브 이미지" /></div>
         </section>
 
         <section class="img_moved">
             <div class="slide_wrapper">
                 <h2>Shop the Look</h2>
-                <button type="button" class="arrow_button border rounded">
+                <button type="button" class="arrow_button border rounded" aria-label="Shop the Look 더보기">
                     <span>더보기</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
 
-            <ul class="slide_container">
-                <li role="button">
-                    <img src="IMAGE/slide_1.jpg" height="1066" />
+            <ul class="slide_container" aria-label="Shop the Look 갤러리">
+                <li role="button" aria-label="룩 1 상세보기">
+                    <img src="IMAGE/slide_1.jpg" height="1066" alt="Shop the Look 이미지 1"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_2.jpg" height="1066" width="800"/>
+                <li role="button" aria-label="룩 2 상세보기">
+                    <img src="IMAGE/slide_2.jpg" height="1066" width="800" alt="Shop the Look 이미지 2"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_3.jpg" height="1066" "/>
+                <li role="button" aria-label="룩 3 상세보기">
+                    <img src="IMAGE/slide_3.jpg" height="1066" alt="Shop the Look 이미지 3"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_4.jpg" height="1067" width="800"/>
+                <li role="button" aria-label="룩 4 상세보기">
+                    <img src="IMAGE/slide_4.jpg" height="1067" width="800" alt="Shop the Look 이미지 4"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_5.jpg" height="1067" width="800"/>
+                <li role="button" aria-label="룩 5 상세보기">
+                    <img src="IMAGE/slide_5.jpg" height="1067" width="800" alt="Shop the Look 이미지 5"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_6.jpg" height="1069" width="800"/>
+                <li role="button" aria-label="룩 6 상세보기">
+                    <img src="IMAGE/slide_6.jpg" height="1069" width="800" alt="Shop the Look 이미지 6"/>
                 </li>
-                <li role="button">
-                    <img src="IMAGE/slide_7.jpg" height="1067" width="800"/>
+                <li role="button" aria-label="룩 7 상세보기">
+                    <img src="IMAGE/slide_7.jpg" height="1067" width="800" alt="Shop the Look 이미지 7"/>
                 </li>
 
             </ul>
@@ -764,7 +775,7 @@
 
     <footer>
         <div class="first_footer_information">
-            <section class="site_nav">
+            <nav class="site_nav" aria-label="사이트 맵">
                 <div>
                     <h4>Corporate</h4>
                     <ul>
@@ -793,21 +804,21 @@
                         <li><a href="#">멤버혜택</a></li>
                     </ul>
                 </div>
-            </section>
+            </nav>
 
             <div>
-                <section class="sns_nav">
+                <section class="sns_nav" aria-label="SNS 바로가기">
                     <nav>
                         <ul>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="X (트위터)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
                 </section>
 
-                <section class="me_information">
+                <section class="me_information" aria-label="관리자 정보">
                     <div>강희지</div>
                     <div>comkhj82@naver.com</div>
                     <div>평일 월 - 금 : 09시 - 18시 (공휴일 제외)</div>
@@ -819,12 +830,12 @@
         <hr>
 
         <div class="bottom_information">
-            <section class="corp_information">
+            <section class="corp_information" aria-label="회사 정보">
                 <div>
                     <div>
                         <span>미스토코리아(주) 대표이사 : 김지헌</span>
                         <span>서울특별시 성북구 보문로 35</span>
-                        <span>사업자등록번호 : 716-81-01573 사업자정보확인</span>
+                        <span>사업자등록번호 : 716-81-01573 <a href="#" title="사업자정보확인 새창 열림">사업자정보확인</a></span>
                     </div>
                     <div>
                         <span>통신판매업신고 : 제 2024-서울성북-0914 호</span>
@@ -833,7 +844,7 @@
                 </div>
             </section>
 
-            <section class="site_information">
+            <section class="site_information" aria-label="공지사항">
                 <div>본 사이트는 실제로 동작하는 사이트가 아닙니다.</div>
                 <div>본 사이트의 상품이미지 저작권은 미스토코리아(주)에 있으며, 사이트의 내용은 법적 효력이 없습니다.</div>
             </section>
@@ -842,22 +853,22 @@
 
 
     <div class="modal_container">
-        <div class="modal">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="index-modal-title">
             <section class="img_section">
-                <img src="IMAGE/product2.jpg" alt="#" width="100%" />
+                <img src="IMAGE/product2.jpg" alt="선택한 상품 대표 이미지" width="100%" />
             </section>
 
             <section class="form_section">
                 <form action="#">
                     <div class="select_all_container">
                         <div>
-                            <input type="checkbox" id="select_all">
-                            <label for="select_all">전체선택</label>
+                            <input type="checkbox" id="index-select_all">
+                            <label for="index-select_all" id="index-modal-title">전체선택</label>
 
                         </div>
 
-                        <button type="button" class="close_btn">
-                            <i class="fa-solid fa-xmark"></i>
+                        <button type="button" class="close_btn" aria-label="팝업 닫기">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </button>
                     </div>
 
@@ -865,47 +876,47 @@
                         <ul>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="index-product1">
+                                    <label for="index-product1">
+                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="index-product2">
+                                    <label for="index-product2">
+                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지 2">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="index-product3">
+                                    <label for="index-product3">
+                                        <img src="IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지 3">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                         </ul>

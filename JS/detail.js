@@ -40,6 +40,17 @@ window.onload = () => {
                 body.style.display = "none";
             }
         };
+
+        // 사이즈 버튼 선택 로직 추가
+        const sizeButtons = mainSizeAccordion.querySelectorAll('.size');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // 모든 사이즈 버튼에서 active 클래스 제거
+                sizeButtons.forEach(btn => btn.classList.remove('active'));
+                // 클릭된 버튼에 active 클래스 추가
+                this.classList.add('active');
+            });
+        });
     }
 
     // ==========================================
@@ -152,8 +163,72 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // (선택) 이전에 만드신 photo_video가 있다면 함께 적용 가능
-    const photoVideoSection = document.querySelector('.photo_video');
+    const photoVideoList = document.querySelector('.photo_video > ul');
+    if (photoVideoList) {
+        makeDraggable(photoVideoList);
+    }
 
-
-    makeDraggable(photoVideoSection);
+    // 핏 가이드 컨테이너 드래그 적용
+    const fitContainers = document.querySelectorAll('.fit_container');
+    fitContainers.forEach(container => {
+        makeDraggable(container);
+    });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // ==================================================
+    // 1. 리뷰 검색 아이콘 클릭 시 입력창 토글 (나타나기/숨기기)
+    // ==================================================
+    // 기존 HTML 구조에 맞춰 button과 input을 선택합니다.
+    const searchBtn = document.querySelector('#review .filter .search button');
+    const searchInput = document.querySelector('#review .filter .search > input');
+
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // 버튼 클릭 시 페이지가 새로고침 되는 현상 방지
+            searchInput.classList.toggle('show'); // show 클래스를 넣었다 뺐다 함
+
+            // 입력창이 나타났을 때 자동으로 포커스(커서)를 줍니다.
+            if (searchInput.classList.contains('show')) {
+                searchInput.focus();
+            }
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // ==================================================
+    // 2. 드롭다운 버튼 드래그(스와이프) 슬라이드 적용
+    // ==================================================
+    // 드롭다운 버튼 드래그 적용
+    const dropdownContainer = document.querySelector('.filter > div:nth-child(2)');
+    if (dropdownContainer && typeof makeDraggable === 'function') {
+        makeDraggable(dropdownContainer);
+    }
+
+    // 리뷰 정렬 버튼 선택 로직 추가
+    const sortContainer = document.querySelector('.sort_container');
+    if (sortContainer) {
+        const sortButtons = sortContainer.querySelectorAll('button');
+
+        // 초기 상태: 첫 번째 버튼 활성화 (HTML에서 클래스가 없는 경우 대비)
+        if (!sortContainer.querySelector('button.active') && sortButtons.length > 0) {
+            sortButtons[0].classList.add('active');
+        }
+
+        sortButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                sortButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        }
+
+        // 포토/동영상 먼저 보기 버튼 토글 로직 추가
+        const photoVideoToggleBtn = document.querySelector('#review .filter .search_container > button');
+        if (photoVideoToggleBtn) {
+        photoVideoToggleBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+        }
+        });

@@ -15,9 +15,9 @@
 <body>
 
     <div>
-        <div class="modal">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <section class="img_section">
-                <img src="../IMAGE/product2.jpg" alt="#" width="100%" />
+                <img src="../IMAGE/product2.jpg" alt="선택한 상품 대표 이미지" width="100%" />
             </section>
 
             <section class="form_section">
@@ -25,11 +25,11 @@
                     <div class="select_all_container">
                         <div>
                             <input type="checkbox" id="select_all">
-                            <label for="select_all">전체선택</label>
+                            <label for="select_all" id="modal-title">전체선택</label>
 
                         </div>
-                        <button type="button" class="close_btn">
-                            <i class="fa-solid fa-xmark"></i>
+                        <button type="button" class="close_btn" aria-label="팝업 닫기">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </button>
 
                     </div>
@@ -38,47 +38,47 @@
                         <ul>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="popup-product1">
+                                    <label for="popup-product1">
+                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="popup-product2">
+                                    <label for="popup-product2">
+                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지 2">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                             <li>
                                 <div class="product_item">
-                                    <input type="checkbox" id="product1">
-                                    <label for="product1">
-                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코">
+                                    <input type="checkbox" id="popup-product3">
+                                    <label for="popup-product3">
+                                        <img src="../IMAGE/product_detail.jpg" alt="에샤페 벨크로 메리제인 초코 상품 이미지 3">
                                         <b>에샤페 벨크로 메리제인 초코</b>
                                         <span>BROWN,BROWN,BROWN</span>
                                         <strong>99,900원</strong>
                                     </label>
                                 </div>
-                                <div class="product_size" role="button">
+                                <div class="product_size" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span>사이즈 선택</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </li>
                         </ul>

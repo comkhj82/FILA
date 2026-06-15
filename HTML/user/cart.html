@@ -8,9 +8,13 @@
     <title>cart</title>
 
     <link rel="stylesheet" href="../../CSS/public.css">
+    <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/user/cart.css">
     <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+    <script src="../../JS/header.js" defer></script>
+    <script src="../../JS/common.js" defer></script>
     <script src="../../JS/cart.js" defer></script>
+    <script src="../../JS/popup.js" defer></script>
 
 </head>
 <body>
@@ -26,17 +30,17 @@
                     <div class="select_section">
                         <div>
                             <input type="checkbox" id="choose_all">
-                            <lable for="choose_all">전체 선택</lable>
+                            <label for="choose_all">전체 선택</label>
                         </div>
                         <div>
                             <button type="button">선택 삭제</button>
                         </div>
                     </div>
                     <div class="product_section">
-                        <input type="checkbox" id="choose">
+                        <input type="checkbox" id="choose1" aria-label="상품 선택">
                         <div class="products">
                             <div class="product_img">
-                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320"/>
+                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320" alt="라이트 V넥가디건 상품 이미지"/>
                             </div>
                             <div class="product_info">
                                 <ul>
@@ -48,9 +52,9 @@
                                 </ul>
 
                                 <div class="count_section">
-                                    <i class="fa-solid fa-minus"></i>
+                                    <button type="button" aria-label="수량 감소"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
                                     <span>1</span>
-                                    <i class="fa-solid fa-plus"></i>
+                                    <button type="button" aria-label="수량 증가"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
                                 </div>
                                 <button type="button">삭제</button>
                                 <ul>
@@ -59,16 +63,16 @@
                                 </ul>
 
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
+                            <div class="heart" role="button" aria-label="관심상품 등록" aria-pressed="false">
+                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
                     <div class="product_section">
-                        <input type="checkbox" id="choose">
+                        <input type="checkbox" id="choose2" aria-label="상품 선택">
                         <div class="products">
                             <div class="product_img">
-                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320"/>
+                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320" alt="라이트 V넥가디건 상품 이미지"/>
                             </div>
                             <div class="product_info">
                                 <ul>
@@ -80,9 +84,9 @@
                                 </ul>
 
                                 <div class="count_section">
-                                    <i class="fa-solid fa-minus"></i>
+                                    <button type="button" aria-label="수량 감소"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
                                     <span>1</span>
-                                    <i class="fa-solid fa-plus"></i>
+                                    <button type="button" aria-label="수량 증가"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
                                 </div>
                                 <button type="button">삭제</button>
                                 <ul>
@@ -91,17 +95,17 @@
                                 </ul>
 
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
+                            <div class="heart" role="button" aria-label="관심상품 등록" aria-pressed="false">
+                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
 
                         </div>
                     </div>
                     <div class="product_section">
-                        <input type="checkbox" id="choose">
+                        <input type="checkbox" id="choose3" aria-label="상품 선택">
                         <div class="products">
                             <div class="product_img">
-                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320"/>
+                                <img src="../../IMAGE/user/product1.jpg" height="427" width="320" alt="라이트 V넥가디건 상품 이미지"/>
                             </div>
                             <div class="product_info">
                                 <ul>
@@ -113,9 +117,9 @@
                                 </ul>
 
                                 <div class="count_section">
-                                    <i class="fa-solid fa-minus"></i>
+                                    <button type="button" aria-label="수량 감소"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
                                     <span>1</span>
-                                    <i class="fa-solid fa-plus"></i>
+                                    <button type="button" aria-label="수량 증가"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
                                 </div>
                                 <button type="button">삭제</button>
                                 <ul>
@@ -124,8 +128,8 @@
                                 </ul>
 
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
+                            <div class="heart" role="button" aria-label="관심상품 등록" aria-pressed="false">
+                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
